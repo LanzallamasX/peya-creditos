@@ -8,13 +8,14 @@
 
   .wrapCardsPaymentSteps{
     display: flex;
+    gap: 1rem;
   }
   
   h2{
     font-family: textaBold;
     width: 100%;
     font-size: 3.75rem;
-    line-height: 3.75rem;
+    line-height: 1;
     font-weight: 400;
     padding-top: 4rem;
 
@@ -67,6 +68,7 @@
   
     h2{
       font-size: 1.875rem;
+      padding-bottom: 2rem;
 
       }
   

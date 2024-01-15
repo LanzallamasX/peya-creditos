@@ -1,8 +1,5 @@
 import { useRef, useEffect } from "react";
 import styles from "./CreditRequest.module.scss";
-
-import { useLayoutEffect } from 'react';
-import dynamic from 'next/dynamic';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import MainButton from "../MainButton/MainButton";
@@ -41,8 +38,6 @@ const CreditRequest = () => {
       tl.fromTo(panel, {
         yPercent: 150, duration: i * 0.3, ease: "none"
       }, {yPercent: 0});
-
-      console.log('test');
 
     });      
 
@@ -113,6 +108,5 @@ const CreditRequest = () => {
   );
 };
 
-/* imgDesk, imgMob, title, text, number  */
 
 export default CreditRequest;

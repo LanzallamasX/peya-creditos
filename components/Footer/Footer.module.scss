@@ -1,9 +1,8 @@
  @import "../../styles/variables";
 
  .footer {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(2, fit-content);
+     display: flex;
+     align-items: center;
      justify-content: space-between;
      padding-block: 2em;
      padding-inline: 10%;
@@ -12,10 +11,33 @@
      color: $white;
      width: 100%;
 
-     .logo {
-         grid-column: 1/2;
-         grid-row: 1/2;
+     .wrapLogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .logo {    
+            width: 210px;
+        }
+
+    .inlineList{
+         li {
+              display: inline-block;
+            }
+    }
+
      }
+
+
+      li{
+        display: inline-block;
+        padding: 1rem;
+
+     }
+
+
 
      .disclaimer {
          width: max-content;

@@ -4,34 +4,29 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <div className={styles.wrapLogo}>
       <a href="#hero">
-        <img src="/images/peyaPagosLogo.svg" alt="Logo PedidosYa Pagos" />
+        <img className={styles.logo} src="/images/pedidosya.svg" alt="Logo PedidosYa Pagos" />
       </a>
       <p className={styles.disclaimer}>Pedidos Ya © 2010 - 2022</p>
-      <div className={styles.centerFooterContainer}>
-        <ul>
+
+      </div>
+      <div className={styles.wrapTyC}>
+        <ul className={styles.inlineList}>
           <li>
-            <a target="_blank" href="/docs/tyc.html">
+            <a target="_blank" href="https://creditos.pedidosya.com/terminos-y-condiciones">
               Términos y condiciones
             </a>
           </li>
           <li>
-            <Link href="https://www.pedidosya.com.pa/about/tyc_wallet">
-              Términos cashback
+            <Link href="https://creditos.pedidosya.com/politica-de-privacidad">
+            Politica de privacidad
             </Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link href="https://www.pedidosya.com.pa/about/privacy_policies">
-              Privacidad
-            </Link>
-          </li>
-          {/* <li>
-            <a href="pedidosya://onlinehelp">Preguntas frecuentes</a>
-          </li> */}
+          </li>          
         </ul>
       </div>
+
+      {/*
       <div className={styles.rightFooterContainer}>
         <div className={styles.storeLinks}>
           <Link
@@ -50,6 +45,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      */}
     </footer>
   );
 };

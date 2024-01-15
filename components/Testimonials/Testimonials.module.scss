@@ -10,16 +10,7 @@
      overflow: hidden;
 
  
-     .testimonialsContainer::before{
-        display: block;
-        height: 50px;
-        border-radius: 90% 90% 0 0;
-        background-color: #DFEAFF;
-        content: "";
-        width: 110%;
-        position: relative;
-        left: -5%;
-        }
+
 
      .wrapSlider{
         width: 40%;
@@ -133,46 +124,32 @@
 
 
  @media (max-width: 500px) {
-     .benefitsContainer {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
+     
+   .testimonialsContainer{
+      width: 100%;
+      flex-direction: column-reverse;
+
+
+      .wrapSlider{
          width: 100%;
-         gap: 2em;
+      }
 
-         .rightBenefits {
-             width: 100%;
-             
 
-             h2 {
-                 width: 90%;
-                 text-align: center;
-                 line-height: 1.875rem;
-                 font-size: 1.875rem;
-                 align-self: center;
-             }
+      .odometerWrpBf{
+         font-size: 5rem;
+      }
 
-             .benefitsList {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-self: flex-start;
-                padding-left: 0rem;
-                padding-right: 0rem;
-                gap: 1.25rem;
-                font-size: 1.25em;
-            }
+      .odometer{
+         font-size: 7rem;
+      }
 
-         }
+      .odometerText{
+         font-size: 2.3rem;
+         font-family: TextaAltaMedium;
 
-         .imgBenefits{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-self: center;
-         }
+      }
 
-     }
+   }
+
  }
 
