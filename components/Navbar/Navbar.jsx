@@ -42,31 +42,31 @@ const Navbar = ({ fn }) => {
       <div id="hideMenuContainer" className={styles.hiddenMenuContainer}>
         <ul className={styles.hiddenLinksContainerList}>
           <li onClick={hideNavMenu}>
-            <a href="#cashbackSection">Home</a>
+            <a href="#hero">Home</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#benefitsSection">Historias</a>
+            <a href="#videoStorySection">Historias</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#secureCardSection">Valor extendido</a>
+            <a href="#benefitsSection">Valor extendido</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#pricesSection">usos</a>
+            <a href="#usos">usos</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#pricesSection">requisitos</a>
+            <a href="#RequirementsSection">requisitos</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#pricesSection">pasos</a>
+            <a href="#creditRequest">pasos</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#pricesSection">como pagar</a>
+            <a href="#paymentSteps">como pagar</a>
           </li>   
           <li onClick={hideNavMenu}>
-            <a href="#pricesSection">testimonios</a>
+            <a href="#testimonialsSection">testimonios</a>
           </li>   
           <li onClick={hideNavMenu}>
-            <a href="#pricesSection">preguntas frecuentes</a>
+            <a href="#faqs">preguntas frecuentes</a>
           </li>                                                  
         </ul>
       </div>

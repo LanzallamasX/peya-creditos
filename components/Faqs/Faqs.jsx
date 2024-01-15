@@ -15,7 +15,7 @@ const Faqs = ({}) => {
 
 
   return (
-    <section className={styles.faqsContainer}>
+    <section id="faqs" className={styles.faqsContainer}>
 
       <h2>Preguntas frecuentes</h2>
 
