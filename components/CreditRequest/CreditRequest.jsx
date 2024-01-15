@@ -28,7 +28,7 @@ const CreditRequest = () => {
         pin: true,
         smooth: 5,
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
 
