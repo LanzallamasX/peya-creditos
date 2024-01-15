@@ -1,0 +1,237 @@
+@import "../../styles/variables";
+
+.heroContainer {
+  background-color: $white;
+  padding: 0;
+
+  .spacerMedium{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;    
+    background: rgb(7,2,24);
+    background: -moz-linear-gradient(180deg, rgba(7,2,24,0.6) 0%, rgba(7,2,24,0.3) 6%, rgba(7,2,24,0) 10%, rgba(7,2,24,0) 49%, rgba(7,2,24,0.3) 67%, rgba(7,2,24,0.7) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(7,2,24,0.6) 0%, rgba(7,2,24,0.3) 6%, rgba(7,2,24,0) 10%, rgba(7,2,24,0) 49%, rgba(7,2,24,0.3) 67%, rgba(7,2,24,0.7) 100%);
+    background: linear-gradient(180deg, rgba(7,2,24,0.6) 0%, rgba(7,2,24,0.3) 6%, rgba(7,2,24,0) 10%, rgba(7,2,24,0) 49%, rgba(7,2,24,0.3) 67%, rgba(7,2,24,0.7) 100%);
+    z-index: -1;
+    border-radius: 0px 0px 0px 50px;
+  }
+
+  .bgSliderContainer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    border-radius: 0px 0px 0px 50px;
+  }
+
+
+  .heroSliderContainer,
+  .heroSliderContainerButtonBottom {
+    display: flex;
+    justify-content: space-between;
+    height: 97vh;
+   /* background-color: $blue;*/
+    width: 80%;
+    margin: auto;
+    
+
+    .heroTopContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      flex-basis: 100%;
+      flex-grow: 1;
+      max-width: 40%;
+
+      h1 {
+        line-height: 90%;
+        color: $white;
+        font-size: 5.35em;
+        height: fit-content;
+        font-family: textaHeavy;
+        padding-bottom: 1rem;
+      }
+
+      h3 {
+        width: 100%;
+        line-height: 1em;
+        color: $white;
+        font-size: 2.5em;
+        height: fit-content;
+        font-family: TextaAltaMedium;
+        font-weight: bold;
+        padding-bottom: 2rem;
+      }
+
+      img {
+        width: auto;
+        height: 10%;
+      }
+
+      small {
+        color: $white;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .heroImgBottom__bottom {
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+      width: auto;
+      padding-top: 10%;
+    }
+
+    .heroImgBottom__center {
+      height: 80%;
+      object-fit: contain;
+      object-position: center;
+      width: auto;
+      padding-top: 10%;
+    }
+  }
+
+  .heroSliderContainerButtonBottom {
+    .heroTopContainer {
+      .heroImgTop {
+        height: 4em;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .testheroImgCenter {
+      width: 80%;
+      object-fit: contain;
+      height: fit-content;
+      padding-block: 1em;
+    }
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  .heroContainer {
+    background-color: $white;
+    padding: 0;
+    /*padding-top: var(--top-navbar); */
+
+    .heroSliderContainer,
+    .heroSliderContainerButtonBottom {
+      display: flex;
+      justify-content: space-between;
+      height: 80vh;
+
+    }
+
+
+    .bgSliderContainer{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;   
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 80% 10%; 
+      z-index: -2;
+      border-radius: 0px 0px 0px 50px;
+    }    
+
+    .heroSliderContainer,
+    .heroSliderContainerButtonBottom {
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+
+      .heroTopContainer {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1em;
+        text-align: left;
+        max-width: 80%;
+        padding-bottom: 4rem;
+        /*max-height: 37%; */
+
+        h1 {
+          font-size: 2.5rem;
+        }
+        h3 {
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+          font-weight: 400;
+        }
+      }
+
+      .heroImgBottom {
+        height: 150%;
+        object-fit: cover;
+        object-position: right;
+        width: 100vw;
+        flex-grow: 2;
+      }
+    }
+
+    .heroSliderContainer {
+      img {
+        object-fit: contain !important;
+      }
+    }
+
+    .heroSliderContainerButtonBottom {
+      .heroTopContainer {
+        .heroImgTop {
+          height: 4em;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .heroImgTop {
+        height: 4em;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .testheroImgCenter {
+        width: 80%;
+        object-fit: contain;
+        height: fit-content;
+        padding-block: 1em;
+      }
+    }
+
+    .heroImgTop {
+      height: 10vw !important;
+      width: 100%;
+      object-fit: contain;
+      margin-top: 1em;
+    }
+
+    .bottomButtonContainer {
+      margin-bottom: 5em;
+    }
+
+    .heroImgBottom__center {
+      height: 100vw !important;
+      //   width: 100vw;
+      object-position: bottom !important;
+      //   border: 2px solid red;
+      padding: 0 !important;
+      //   object-fit: fill !important;
+    }
+  }
+}

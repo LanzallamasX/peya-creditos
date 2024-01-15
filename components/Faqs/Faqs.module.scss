@@ -1,0 +1,145 @@
+@import "../../styles/variables";
+
+
+ .faqsContainer {
+     display: flex;
+     gap: 4rem;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     
+
+     
+
+     h2{
+        font-size: 2.15rem;
+        text-align: center;
+        font-family: textaBold;
+        color: $blue;
+        width: 100%;
+        padding-top: 2rem;
+     }
+
+     .wrapFaqs{
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        text-align: left;
+
+     }
+
+     .button{
+        display: flex;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        gap: 0.75rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+
+
+        h2{
+            font-size: 1.35rem;
+            font-family: TextaAltaMedium;
+            color: #000000;
+            display: flex;
+            width: 100%;
+            
+
+            button{
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .colorList{
+                color: #ababab;
+                padding-right: 1rem;
+            }
+
+        }
+
+        section {
+            padding-inline: 5%;
+            padding-block: 1rem;
+            font-size: 1.35rem;
+            color: #646464;
+            width: 100%;
+            height: auto;
+            
+
+        }      
+        
+        p{
+            line-height: 1.85;
+            
+
+
+            a{
+                color: $blue;
+                font-weight: 800;
+            }
+        }
+
+     }
+
+
+     
+
+ }
+
+
+
+ @media (max-width: 500px) {
+     .faqsContainer {
+
+        gap: 1.5rem;
+
+         
+        h2{
+            font-size: 1.875rem;
+        }
+
+
+        .button{
+
+            gap: 0.35rem;
+
+                
+    
+            h2{
+                font-size: 0.875rem;
+                font-family: TextaAltaMedium;
+                color: #000000;
+                display: flex;
+                width: 100%;
+            
+    
+                .colorList{
+                    color: #ababab;
+                    padding-right: 1rem;
+                }
+    
+            }
+    
+            section {
+                font-size: 0.875rem;    
+            }      
+            
+            p{
+                line-height: 1.65;
+                    
+            }
+    
+         }
+
+
+
+     }
+ }
+

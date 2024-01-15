@@ -1,0 +1,26 @@
+.itemBenefitContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+
+    img {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+
+    p {
+        font-size: 1.245rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .itemBenefitContainer {
+        justify-content: flex-start;
+        width: 100%;
+
+        img {
+            width: 0.75rem;
+            height:  0.75rem;
+        }
+    }
+}

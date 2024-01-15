@@ -1,0 +1,180 @@
+
+
+
+ .RequirementsContainer {
+     display: flex;
+     align-items: center;
+     gap: 0rem;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+
+
+
+     .rightRequirements {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 2rem;
+
+         .titleDesk{
+            display: block;
+         }
+
+         h2 {
+            font-family: textaRegular;
+             width: 100%;
+             font-size: 3.75rem;
+             line-height: 3.75rem;
+             font-weight: 400;
+
+             b {
+                font-family: textaHeavy;
+             }
+         }
+
+         .RequirementsList {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-self: flex-start;
+             padding-left: 2rem;
+             padding-right: 2rem;
+             gap: 1.25rem;
+             font-size: 1.25em;
+         }
+     }
+
+     .titleMob{
+        position: absolute;
+        width: 100%;
+        display: none;
+     }
+
+     .imgGradient{position: absolute; width: 348px; display: block; height: 100%;
+        background: rgb(82, 83, 83);
+        background: -moz-linear-gradient(180deg, rgba(0,0,0,0.8) 7%, rgba(0,74,221,0) 27%);
+        background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.8) 7%, rgba(0,74,221,0) 27%);
+        background: linear-gradient(180deg, rgba(0,0,0,0.8) 7%, rgba(0,74,221,0) 27%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#004add",endColorstr="#004add",GradientType=1);
+        border-radius: 30px 30px 0 30px;
+
+    }
+
+
+     .imgRequirements{
+        width: 348px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        
+     }
+
+     img {
+        border-radius: 30px 30px 0 30px;
+     }
+
+     .alignSelfCenter{
+        display: flex;
+        align-self: center;
+     }
+     
+
+ }
+
+
+
+ @media (max-width: 500px) {
+
+
+     .RequirementsContainer {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         gap: 2em;
+         padding-inline: 0%;
+         padding-block: 2em;
+
+         .rightRequirements {
+             width: 100%;
+             
+             .titleDesk{
+                display: none;
+             }
+
+             h2 {
+                 width: 90%;
+                 text-align: center;
+                 line-height: 1.875rem;
+                 font-size: 1.875rem;
+                 align-self: center;
+                 padding-inline: 5%;
+             }
+
+             .RequirementsList {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: flex-start;
+                padding-left: 0rem;
+                padding-right: 0rem;
+                gap: 1.25rem;
+                font-size: 1.25em;
+                padding-inline: 5%;
+            }
+
+         }
+
+         .imgRequirements{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            border-radius: 0px 50px 0px 0px;
+
+            img{
+                border-radius: 0px 50px 0px 0px;
+            }
+         }
+
+
+         .imgGradient{position: absolute; width: 100%; display: block; height: 100%;
+            background: rgb(0,74,221);
+            background: -moz-linear-gradient(180deg, rgba(0,74,221,0.8) 7%, rgba(0,74,221,0) 27%);
+            background: -webkit-linear-gradient(180deg, rgba(0,74,221,0.8) 7%, rgba(0,74,221,0) 27%);
+            background: linear-gradient(180deg, rgba(0,74,221,0.8) 7%, rgba(0,74,221,0) 27%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#004add",endColorstr="#004add",GradientType=1);
+            border-radius: 0px 50px 0px 0px;
+        }
+
+
+    
+        .titleMob{
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: #FFFFFF;
+
+            h2{
+                color: #FFFFFF;
+                font-size: 1.875rem;
+            }
+         }
+
+
+     }
+
+
+
+
+
+
+
+ }
+

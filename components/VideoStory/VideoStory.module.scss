@@ -1,0 +1,115 @@
+@import "../../styles/variables";
+
+.videoStoryContainer {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     gap: 1em;
+     height: 100vh;
+
+     .wrapVideoStory{
+        background-color: $blue;
+        display: flex;
+        flex-direction: row;
+        padding: 4rem;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        border-radius: 20px;
+     }
+
+     .videoStoryTopText {
+        text-align: left;
+        width: 40%;
+        font-family: textaHeavy;
+        font-weight: 500;
+
+        h2 {
+            font-size: 3.75rem;
+            color: $white;
+            line-height: 100%;
+            padding-bottom: 1rem;
+        }
+         p {
+             font-size: 1.25rem;
+             color: $white;
+             line-height: 100%;
+             font-family: TextaAltaMedium;
+         }
+         
+
+     }
+
+     .videoContainer {
+        position: relative;
+        width: 60%;
+        align-self: center;
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+     .videoStoryCardsMainContainer {
+         min-width: 100%;
+         width: fit-content;
+         display: flex;
+         justify-content: center;
+         gap: 2em;
+         align-items: stretch;
+     }
+ }
+
+
+
+
+ @media (max-width: 500px) {
+     .videoStoryContainer {
+
+        .wrapVideoStory{
+            flex-direction: column;    
+            padding: 2rem;
+            gap: 1rem;
+
+         }
+
+         .videoStoryTopText {
+            width: 100%;
+            text-align: center;
+
+             h2 {
+                 font-size: 1.875rem;
+                 line-height: 1em;
+             }
+
+             p {
+                 font-size: 1.25rem;
+                 padding-bottom: 1em;
+             }
+         }
+
+         .videoContainer {
+            position: relative;
+            width: 100%;
+            align-self: center;
+    
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }         
+
+         .videoStoryCardsMainContainer {
+             min-width: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+     }
+
+
+
+ }

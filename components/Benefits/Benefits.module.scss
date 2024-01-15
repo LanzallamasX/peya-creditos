@@ -1,0 +1,110 @@
+
+ .benefitsContainer {
+     display: flex;
+     align-items: center;
+     gap: 0rem;
+     height: 60vh;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+
+
+
+     .rightBenefits {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 2rem;
+
+         h2 {
+            font-family: textaRegular;
+             width: 100%;
+             font-size: 3.75rem;
+             line-height: 3.75rem;
+             font-weight: 400;
+
+             b {
+                font-family: textaHeavy;
+             }
+         }
+
+         .benefitsList {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-self: flex-start;
+             padding-left: 2rem;
+             padding-right: 2rem;
+             gap: 1.25rem;
+             font-size: 1.25em;
+         }
+     }
+
+
+
+     .imgBenefits{
+        width: 348px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+     }
+
+     img {
+         border-radius: 1.5em;
+     }
+
+     .alignSelfCenter{
+        display: flex;
+        align-self: center;
+     }
+     
+
+ }
+
+
+
+ @media (max-width: 500px) {
+     .benefitsContainer {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         gap: 2em;
+
+         .rightBenefits {
+             width: 100%;
+             
+
+             h2 {
+                 width: 90%;
+                 text-align: center;
+                 line-height: 1.875rem;
+                 font-size: 1.875rem;
+                 align-self: center;
+             }
+
+             .benefitsList {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: flex-start;
+                padding-left: 0rem;
+                padding-right: 0rem;
+                gap: 1.25rem;
+                font-size: 1.25em;
+            }
+
+         }
+
+         .imgBenefits{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+         }
+
+     }
+ }
+
