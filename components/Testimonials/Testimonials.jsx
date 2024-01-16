@@ -3,6 +3,8 @@ import SliderComponent from "../SliderComponent/SliderComponent";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 const Testimonials = ({fn}) => {
+
+  
   return (
     <section id="testimonialsSection" className={styles.testimonialsContainer}>
 

@@ -16,6 +16,8 @@ const CreditRequest = () => {
 
 
   useEffect(() => {
+    if (container.current) {
+
     const panels = gsap.utils.toArray('[data-element="elem1"]');
     let ctx = gsap.context(() => {
 
@@ -28,9 +30,11 @@ const CreditRequest = () => {
         pin: true,
         smooth: 5,
         scrub: true,
-        markers: false,
+        markers: true,
       },
     });
+
+    ScrollTrigger.refresh();
 
     // Aplica animación a cada panel
     panels.forEach((panel, i) => {
@@ -44,6 +48,8 @@ const CreditRequest = () => {
     }, container); // <- scopes all selector text inside the context to this component (optional, default is document)
     
     return () => ctx.revert(); // cleanup! 
+  }
+
   }, []);
 
   return (    
