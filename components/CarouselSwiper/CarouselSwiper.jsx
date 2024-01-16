@@ -34,7 +34,7 @@ const CarouselSwiper = () => {
   }, []); // La dependencia vacía asegura que el efecto se ejecute solo una vez al montar el componente
 
   // Calcular 'amount' basado en el ancho de la ventana
-  const amount = windowWidth < 500 ? "1" : "5";
+  const amount = windowWidth < 768 ? "1" : "5";
 
   return (    
     <div id="usos" className={styles.usosContainer}>

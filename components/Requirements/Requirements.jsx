@@ -11,11 +11,9 @@ const Requirements = ({fn}) => {
         key={2}
         className={styles.rightRequirements}
         initial={{
-          transform: "translateX(-100%)",
           opacity: 0,
         }}
         whileInView={{
-          transform: "translateX(0%)",
           opacity: 1,
           transition: {
             duration: 1,
@@ -26,7 +24,6 @@ const Requirements = ({fn}) => {
         }}
         viewport={{ once: true }}
         exit={{
-          transform: "translateX(0%)",
           opacity: 1,
         }}
       >
@@ -42,11 +39,11 @@ const Requirements = ({fn}) => {
         key={1}
         className={styles.rightRequirements}
         initial={{
-          transform: "translateX(+100%)",
+          transform: "translateY(-20%)",
           opacity: 0,
         }}
         whileInView={{
-          transform: "translateX(0%)",
+          transform: "translateY(0%)",
           opacity: 1,
           transition: {
             duration: 1,

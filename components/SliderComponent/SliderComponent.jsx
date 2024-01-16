@@ -3,11 +3,11 @@ import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean}) => {
+const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position}) => {
   return (
     <Swiper
       slidesPerView={amount}
-      
+      direction={position}
       pagination={paginationBoolean}
       
       modules={[Pagination, Autoplay]}

@@ -10,11 +10,9 @@ const Benefits = ({fn}) => {
         key={2}
         className={styles.rightBenefits}
         initial={{
-          transform: "translateX(-100%)",
           opacity: 0,
         }}
         whileInView={{
-          transform: "translateX(0%)",
           opacity: 1,
           transition: {
             duration: 1,
@@ -25,7 +23,6 @@ const Benefits = ({fn}) => {
         }}
         viewport={{ once: true }}
         exit={{
-          transform: "translateX(0%)",
           opacity: 1,
         }}
       >
@@ -37,11 +34,11 @@ const Benefits = ({fn}) => {
         key={1}
         className={styles.rightBenefits}
         initial={{
-          transform: "translateX(+100%)",
+          transform: "translateY(+10%)",
           opacity: 0,
         }}
         whileInView={{
-          transform: "translateX(0%)",
+          transform: "translateY(0%)",
           opacity: 1,
           transition: {
             duration: 1,
@@ -78,10 +75,12 @@ const Benefits = ({fn}) => {
             img={"/icons/benefits/bullet.svg"}
             imgAlt={"Icono descuentos"}
           />  
-          <MainButton
-          fn={fn}
-          color="buttonRed"
-        />        
+            <div className={styles.wrapMainBtn}>
+              <MainButton
+              fn={fn}
+              color="buttonRed"
+            />        
+          </div>
         </div>
       </motion.div>
     </section>

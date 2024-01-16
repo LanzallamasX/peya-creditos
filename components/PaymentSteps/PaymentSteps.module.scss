@@ -50,6 +50,13 @@
   padding-top: 2rem;
 }
 
+.mobWrap{
+  display: none;
+}
+.deskWrap{
+  display: flex;
+}
+
 
 }
 
@@ -58,8 +65,20 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .PaymentStepsContainer{
+
+    .wrapSlider{
+      width: 100%;
+    }
+
+    .mobWrap{
+      display: block;
+    }
+
+    .deskWrap{
+      display: none;
+    }
 
     .wrapCardsPaymentSteps{
       flex-direction: column;

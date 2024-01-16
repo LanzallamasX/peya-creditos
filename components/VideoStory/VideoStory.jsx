@@ -24,7 +24,9 @@ const videoStory = () => {
           <p>Conocé la historia de Juan, <br /> dueño en <i>Cata, tienda de calzone</i></p>
         </div>
         <div className={styles.videoContainer}>
+          <div className={styles.wrapIframe}>
           <iframe src="https://www.youtube.com/embed/K_Ig2THVe3U?si=ndyAer66Z6TZsfKD"></iframe>    
+          </div>
         </div>
       </div>
      

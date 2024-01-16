@@ -1,10 +1,9 @@
-import { useRef, useEffect } from "react";
 import styles from "./CreditRequest.module.scss";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import MainButton from "../MainButton/MainButton";
 import CardCreditRequest from "../CardCreditRequest/CardCreditRequest";
-
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 // Registra los plugins al importarlos
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,6 +66,7 @@ const CreditRequest = () => {
                         title={"Simulá tu crédito"}
                         text={"Elegí el monto a solicitar, en cuantas cuotas lo querés abonar y conocé el monto final."}
                         color={"cardBlue"}
+                        lineColor={"lineWhite"}
                   />
                   </div>  
                   <div className="cardWrap" data-element={"elem1"} style={{ position:'absolute'}}>   
@@ -77,6 +77,7 @@ const CreditRequest = () => {
                                 title={"Confirmá tus datos"}
                                 text={"Para completar la solicitud y recibir información debés confirmar e-mail y un teléfono de contacto."}
                                 color={"cardGreen"}
+                                lineColor={"lineBlue"}
                           />   
                   </div>  
 
@@ -88,6 +89,7 @@ const CreditRequest = () => {
                                 title={"Aceptá T&C"}
                                 text={"heck de la declaración jurada y términos & condiciones."}
                                 color={"cardBlue"}
+                                lineColor={"lineWhite"}
                           />    
                   </div>  
 
@@ -101,6 +103,7 @@ const CreditRequest = () => {
                                 color={"cardGreen"}
                                 endCardTitle="endCardTitle"
                                 endCardText="endCardText"
+                                
                           />   
                   </div>                    
           </div>

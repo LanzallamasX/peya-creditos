@@ -3,11 +3,10 @@
      display: flex;
      align-items: center;
      gap: 0rem;
-     height: 60vh;
      display: flex;
      justify-content: center;
      flex-direction: row;
-
+    
 
 
      .rightBenefits {
@@ -18,9 +17,9 @@
          gap: 2rem;
 
          h2 {
-            font-family: textaRegular;
+            font-family: TextaAltaMedium;
              width: 100%;
-             font-size: 3.75rem;
+             font-size: 4.35rem;
              line-height: 3.75rem;
              font-weight: 400;
 
@@ -38,16 +37,17 @@
              padding-right: 2rem;
              gap: 1.25rem;
              font-size: 1.25em;
+             padding-top: 3rem;
          }
      }
 
 
 
      .imgBenefits{
-        width: 348px;
+        width: 55%;
         display: flex;
         justify-content: center;
-        align-self: center;
+        align-self: flex-start;
      }
 
      img {
@@ -63,8 +63,15 @@
  }
 
 
+ .wrapMainBtn{
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
 
- @media (max-width: 500px) {
+
+ @media (max-width: 768px) {
      .benefitsContainer {
          display: flex;
          flex-direction: column;
@@ -94,12 +101,16 @@
                 padding-right: 0rem;
                 gap: 1.25rem;
                 font-size: 1.25em;
+                padding-top: 1rem;
+
             }
+
+
 
          }
 
          .imgBenefits{
-            width: 50%;
+            width: 55%;
             display: flex;
             justify-content: center;
             align-self: center;

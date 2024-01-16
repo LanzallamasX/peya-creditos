@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 3rem;
   
   h2{
     font-family: textaBold;
@@ -53,7 +54,7 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .creditRequestContainer{
     
   

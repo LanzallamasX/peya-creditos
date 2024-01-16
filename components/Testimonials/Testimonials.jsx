@@ -2,13 +2,47 @@ import styles from "./Testimonials.module.scss";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
+
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { useInView } from 'react-intersection-observer';
+
 const Testimonials = ({fn}) => {
+  const [screenInView, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      const items = document.querySelectorAll(".data");
+      let ctx3 = gsap.context(() => {
+        gsap.from(items, {
+          textContent: 0,
+          duration: 3,
+          ease: "power1.in",
+          snap: { textContent: 1 },
+          stagger: {
+            each: 1.0,
+            onUpdate: function() {
+              this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+            },
+          }
+        });
+
+        function numberWithCommas(x) {
+          return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+      });
+
+      return () => ctx3.revert(); // cleanup!
+    }
+  }, [inView]);
 
   
   return (
     <section id="testimonialsSection" className={styles.testimonialsContainer}>
 
-            <div className={styles.wrapSlider}>
+            <div ref={screenInView} className={styles.wrapSlider}>
   {
                <SliderComponent amount={1} paginationBoolean={false} loopBoolean={false}>
                   <SwiperSlide>
@@ -27,7 +61,7 @@ const Testimonials = ({fn}) => {
           <div className={styles.odometerNum}>
               <div className={styles.odometerWrpBf}>+</div>
               <div className={styles.odometerWrpNm}>
-                <div className={styles.odometer} id="odometer">10.000</div>
+                <div className={styles.odometer} id="odometer"><span className="data">10000</span></div>
               </div>
           </div>
           <div className={styles.odometerText}>Créditos solicitados</div>

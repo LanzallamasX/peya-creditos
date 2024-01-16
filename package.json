@@ -25,6 +25,7 @@
     "react-gtm-module": "^2.0.11",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.5.3",
     "sass": "^1.56.1",
     "svg-loaders-react": "^2.2.1",
     "swiper": "^8.4.7",

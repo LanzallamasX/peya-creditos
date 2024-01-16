@@ -7,7 +7,7 @@
      align-items: center;
      text-align: center;
      gap: 1em;
-     height: 100vh;
+     min-height: 100vh;
 
      .wrapVideoStory{
         background-color: $blue;
@@ -16,18 +16,19 @@
         padding: 4rem;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         border-radius: 20px;
+        min-width: 100%;
      }
 
      .videoStoryTopText {
         text-align: left;
-        width: 40%;
+        width: 50%;
         font-family: textaHeavy;
         font-weight: 500;
 
         h2 {
-            font-size: 3.75rem;
+            font-size: 4.35rem;
             color: $white;
             line-height: 100%;
             padding-bottom: 1rem;
@@ -44,12 +45,28 @@
 
      .videoContainer {
         position: relative;
-        width: 60%;
+        width: 80%;
+        height: 100%;
         align-self: center;
 
-        iframe {
+        .wrapIframe{
+            position: relative;
             width: 100%;
-            height: 400px;
+            height: 550px;
+            padding-bottom: 50%;
+
+            overflow: hidden;
+            align-self: center;
+            display: flex;
+        }
+
+        iframe {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            align-self: center;
         }
     }
 
@@ -66,8 +83,15 @@
 
 
 
- @media (max-width: 500px) {
+ @media (max-width: 768px) {
+
+
+
      .videoStoryContainer {
+
+        padding-inline: 3%;
+
+
 
         .wrapVideoStory{
             flex-direction: column;    
@@ -95,10 +119,20 @@
             position: relative;
             width: 100%;
             align-self: center;
+
+            .wrapIframe{
+                position: relative;
+                width: 100%;
+                height: 350px;
+                padding-bottom: 0px;
+                overflow: hidden;
+                align-self: center;
+                display: flex;
+            }
     
             iframe {
                 width: 100%;
-                height: 200px;
+                height: 350px;
             }
         }         
 
