@@ -139,6 +139,21 @@
             img{
                 border-radius: 0px 50px 0px 0px;
             }
+
+            .titleMob{
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                color: #FFFFFF;
+                padding-top: 2rem;
+    
+                h2{
+                    color: #FFFFFF;
+                    font-size: 1.875rem;
+                }
+             }
+
          }
 
 
@@ -153,19 +168,7 @@
 
 
     
-        .titleMob{
-            position: absolute;
-            top: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            color: #FFFFFF;
 
-            h2{
-                color: #FFFFFF;
-                font-size: 1.875rem;
-            }
-         }
 
 
      }

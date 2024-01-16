@@ -7,26 +7,7 @@ import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detec
 const Requirements = ({fn}) => {
   return (
     <section id="RequirementsSection" className={styles.RequirementsContainer}>
-      <motion.div
-        key={2}
-        className={styles.rightRequirements}
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 1,
-            type: "tween",
-            damping: 25,
-            stiffness: 500,
-          },
-        }}
-        viewport={{ once: true }}
-        exit={{
-          opacity: 1,
-        }}
-      >
+      
         <div className={styles.imgRequirements}>
           <div className={styles.imgGradient}></div>
           <div className={styles.titleMob}>
@@ -34,7 +15,6 @@ const Requirements = ({fn}) => {
           </div>
          <img src="/images/pedidos-ya-requisitos-mb.jpg" alt="pedidos ya requisitos" />
          </div>
-      </motion.div>      
       <motion.div
         key={1}
         className={styles.rightRequirements}
