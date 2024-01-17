@@ -20,6 +20,9 @@ const PaymentSteps = () => {
   const card3Ref = useRef();
 
   useEffect(() => {
+    console.log("useEffect triggered");
+    console.log("container2.current:", container2.current);
+
     if (container2.current) {
 
     // Verifica si container2 es válido antes de ejecutar el código
