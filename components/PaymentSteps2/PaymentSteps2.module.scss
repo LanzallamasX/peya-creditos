@@ -5,19 +5,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
 
   .wrapCardsPaymentSteps{
     width: 90%; max-width: 90%;
     position: relative;
     overflow: hidden;
+  
     display: flex;
     gap: 4rem;
     flex-direction: row;
     justify-content: center;
    align-self: center;
-   
   }
   
   h2{
@@ -49,8 +47,9 @@
 
 .cards{
   width: 90%; max-width: 90%;
-
-  position: absolute;
+    max-height: 600px;
+    height: 600px;
+  position: relative;
   overflow: hidden;
 
   display: flex;
@@ -81,17 +80,6 @@
 @media (max-width: 768px) {
   .PaymentStepsContainer{
 
-
-    .cardWrap{
-
-      width: 100%;
-      flex-shrink: 1;
-      flex-grow: 1;   
-      position: absolute; 
-
-}
-
-
     .wrapSlider{
       width: 100%;
     }
@@ -106,7 +94,6 @@
 
     .wrapCardsPaymentSteps{
       flex-direction: column;
-      height: 700px;
     }
     
   

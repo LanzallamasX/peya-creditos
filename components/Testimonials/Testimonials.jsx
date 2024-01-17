@@ -41,10 +41,10 @@ const Testimonials = ({fn}) => {
   
   return (
     <section id="testimonialsSection" className={styles.testimonialsContainer}>
-      <div className="container flex justify-between">
+      <div className="container flex justify-between flex-col-reverse	 md:flex-row sm:flex-row">
 
                   <div ref={screenInView} className={styles.wrapSlider}>
-        {
+                    {
                     <SliderComponent amount={1} paginationBoolean={false} loopBoolean={false}>
                         <SwiperSlide>
                           <div className={styles.wrapImgSlider}>

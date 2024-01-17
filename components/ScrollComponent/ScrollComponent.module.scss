@@ -1,0 +1,79 @@
+
+.creditRequestContainer{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  
+  h2{
+    font-family: textaBold;
+    width: 100%;
+    line-height: 3.75rem;
+    font-weight: 400;
+    padding-top: 4rem;
+
+    b {
+      font-family: textaHeavy;
+   }
+
+    }
+
+  p{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .cardWrap{
+    position: absolute;
+    width: 100%;
+  }
+
+.cards{
+  width: 90%; max-width: 90%;
+  max-height: 700px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.pTop{
+  padding-top: 2rem;
+}
+
+
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .creditRequestContainer{
+    
+  
+    h2{
+      font-size: 1.875rem;
+
+      }
+  
+    p{
+      font-size: 1.25rem;
+      padding-top: 0rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+
+  .cardWrap{
+    position: absolute;
+    width: 50%;
+  }
+
+}

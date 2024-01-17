@@ -26,5 +26,3 @@ const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean,
 };
 
 export default SliderComponent;
-
-

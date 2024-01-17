@@ -67,7 +67,8 @@ const Home = ({ heroDataFromDB, promoDataFromDB }) => {
         <Benefits />
         <CarouselSwiper />
         <Requirements />
-        <CreditRequest />
+        <CreditRequest /> 
+
         <PaymentSteps />
         <Testimonials />
         

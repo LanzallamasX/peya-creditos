@@ -16,7 +16,7 @@ const Faqs = ({}) => {
 
   return (
     <section id="faqs" className={styles.faqsContainer}>
-      <div className="container w-[60vw]">
+      <div className="container w-[95vw] sm:w-[100vw] md:w-[50vw] lg:w-[68vw] xl:w-[68vw]">
       <h2>Preguntas frecuentes</h2>
 
         <Accordion className={styles.wrapFaqs}  

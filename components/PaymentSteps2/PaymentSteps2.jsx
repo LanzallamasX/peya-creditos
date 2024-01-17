@@ -1,28 +1,27 @@
-import styles from "./CreditRequest.module.scss";
-import MainButton from "../MainButton/MainButton";
-import CardCreditRequest from "../CardCreditRequest/CardCreditRequest";
 import { useRef, useEffect } from "react";
+import styles from "./PaymentSteps2.module.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-// Registra los plugins al importarlos
+import CardPaymentSteps from "../CardPaymentSteps/CardPaymentSteps";
+import CardCreditRequest from "../CardCreditRequest/CardCreditRequest";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
-
-
-const CreditRequest = () => {
-  const container = useRef();
+const PaymentSteps2 = () => {
+  const container2 = useRef();
 
 
   useEffect(() => {
-    if (container.current) {
+    if (container2.current) {
 
-    const panels = gsap.utils.toArray('[data-element="elem1"]');
-    let ctx = gsap.context(() => {
+    const panels2 = gsap.utils.toArray('[data-element="elem2"]');
+    let ctx2 = gsap.context(() => {
 
-    const tl = gsap.timeline({
+    const tl2 = gsap.timeline({
       scrollTrigger: {
-        trigger: container.current,
+        trigger: container2.current,
         start: "top",
         end: "max",
         pin: true,
@@ -33,35 +32,34 @@ const CreditRequest = () => {
     });
 
 
-    panels.forEach((panel, i) => {
+    panels2.forEach((panel, i) => {
       if (i === 0) return;
-      tl.fromTo(panel, {
+      tl2.fromTo(panel, {
         yPercent: 150, duration: i * 0.3, ease: "none"
       }, {yPercent: 0});
 
     });      
 
 
-    }, container); // <- scopes all selector text inside the context to this component (optional, default is document)
+    }, container2); // <- scopes all selector text inside the context to this component (optional, default is document)
     
     ScrollTrigger.refresh();
 
 
-    return () => ctx.revert(); // cleanup! 
+    return () => ctx2.revert(); // cleanup! 
   }
 
   }, []);
 
 
-
   return (    
-    <section id="creditRequest" ref={container} className={styles.creditRequestContainer}>
+    <section id="creditRequest" ref={container2} className={styles.creditRequestContainer}>
       <div className="container flex flex-col gap-8 items-center">
             <h2>Solicitá tu Crédito en <b>3 pasos</b></h2>
             <p>Como ya te conocemos, no necesitás pasar por el proceso burocrático bancario tradicional.</p>
 
             <div className={styles.cards}>   
-                    <div className={styles.cardWrap} data-element={"elem1"}>   
+                    <div className={styles.cardWrap} data-element={"elem2"}>   
                     <CardCreditRequest 
                           number={"1"}
                           imgDesk={"images/steps/Paso-1_dk.jpg"}
@@ -72,7 +70,7 @@ const CreditRequest = () => {
                           lineColor={"lineWhite"}
                     />
                     </div>  
-                    <div className={styles.cardWrap} data-element={"elem1"}>   
+                    <div className={styles.cardWrap} data-element={"elem2"}>   
                       <CardCreditRequest
                                   number={"2"}
                                   imgDesk={"images/steps/Paso-2_dk.jpg"}
@@ -84,7 +82,7 @@ const CreditRequest = () => {
                             />   
                     </div>  
 
-                    <div className={styles.cardWrap} data-element={"elem1"}>   
+                    <div className={styles.cardWrap} data-element={"elem2"}>   
                       <CardCreditRequest
                                   number={"3"}
                                   imgDesk={"images/steps/Paso-3_dk.jpg"}
@@ -96,7 +94,7 @@ const CreditRequest = () => {
                             />    
                     </div>  
 
-                    <div className={styles.cardWrap} data-element={"elem1"}>   
+                    <div className={styles.cardWrap} data-element={"elem2"}>   
                     <CardCreditRequest
                                   number={""}
                                   imgDesk={"images/steps/Paso-4_dk.jpg"}
@@ -111,14 +109,9 @@ const CreditRequest = () => {
                     </div>                    
             </div>
 
-            <MainButton
-                color="buttonRed"
-
-            />
         </div>
     </section>  
   );
 };
 
-
-export default CreditRequest;
+export default PaymentSteps2;
