@@ -70,6 +70,7 @@ const Home = ({ heroDataFromDB, promoDataFromDB }) => {
         <CreditRequest />
         <PaymentSteps />
         <Testimonials />
+        
         <Faqs />
 
       </main>

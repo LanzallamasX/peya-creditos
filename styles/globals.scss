@@ -50,14 +50,21 @@ html {
 h2 {
   color: #004add;
   font-weight: 400;
-  font-size: 3em;
+  font-size: clamp(1.875rem, 4.5vw, 4.35rem); 
+  line-height: 1;
   height: fit-content;
   padding: 0;
-  font-family: textaHeavy;
+  font-family: TextaAltaMedium;
+}
+
+p {
+  font-size: clamp(1.25rem, 1.55vw, 1.55rem); 
+  font-family: TextaAltaMedium;
+  line-height: 1;
 }
 
 section {
-  padding-inline: 15%;
+ /* padding-inline: 15%;*/
   padding-block: 2em;
 }
 

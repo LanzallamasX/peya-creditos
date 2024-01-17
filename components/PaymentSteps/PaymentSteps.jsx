@@ -18,18 +18,16 @@ const PaymentSteps = () => {
   const card1Ref = useRef();
   const card2Ref = useRef();
   const card3Ref = useRef();
-/*
+
   useEffect(() => {
-    console.log("Container 2do Ref:", container2.current);
-    console.log("PANEL 1 Ref:", card1Ref.current);
-    console.log("PANEL 2 Ref:", card2Ref.current);
-    console.log("PANEL 3 Ref:", card3Ref.current);
+    if (container2.current) {
 
     // Verifica si container2 es válido antes de ejecutar el código
       const panels2 = [card1Ref.current, card2Ref.current, card3Ref.current];
-      const panelsAnim = gsap.utils.toArray(panels2);
+      const panelsAnim = gsap.utils.toArray('[data-element="elem2"]');
 
-      
+   //   gsap.fromTo(panels2, {y: 500}, {duration: 5, y: 0, stagger: 0.5, ease: "power3.out"}, 2)
+
       let ctx2 = gsap.context(() => {
         // Crea la animación con GSAP y ScrollTrigger
         const tl2 = gsap.timeline({
@@ -48,7 +46,7 @@ const PaymentSteps = () => {
         panelsAnim.forEach((panel, i) => {
           if (i === 0) return;
           tl2.fromTo(panel, {
-            yPercent: 100, duration: i * 0.3, ease: "none"
+            yPercent: 50, duration: i * 0.3, ease: "none"
           }, {yPercent: 0});
     
         });  
@@ -56,62 +54,72 @@ const PaymentSteps = () => {
 
         ScrollTrigger.refresh();
 
-      }, container2); // <- scopes all selector text inside the context to this component (optional, default is document)
+      }, container2); 
   
-      return () => ctx2.revert(); // cleanup!
+      return () => ctx2.revert(); 
+    }
+    }, [container2, card1Ref, card2Ref, card3Ref]);
 
-    }, [card1Ref, card2Ref, card3Ref, container2]);
-
-    */
+    
 
   return (    
     <section id="paymentSteps" ref={container2}  className={styles.PaymentStepsContainer}>
 
-          <h2>Paga las cuotas <b>con tus ventas</b></h2>
-          <div className={`${styles.wrapCardsPaymentSteps} ${styles.deskWrap}`}>
-                  <CardPaymentSteps 
-                      img={"images/card1-1.png"}
-                      text={"La cuota se descontará de la liquidación semanal de ventas."}
-                  />
-                  <CardPaymentSteps 
-                    img={"images/card1-2.png"}
-                    text={"Si no se pudo cobrar el monto total de la cuota, se deducirá de la siguiente liquidación."}
-                />
-                  <CardPaymentSteps 
-                    img={"images/card1-3.png"}
-                    text={"Podrás seguir el progreso de las cuotas desde la sección Finanzas en Partner Portal."}
-                />  
-          </div> 
+      <div className="container flex flex-col ">
 
-          <div className={`${styles.wrapSlider} ${styles.mobWrap}`}>
-
-          <SliderComponent amount={1} paginationBoolean={false} loopBoolean={false} >
-                  <SwiperSlide>
+              <h2>Paga las cuotas <b>con tus ventas</b></h2>
+              <div className={`${styles.wrapCardsPaymentSteps} `}>
+                   <div className={styles.cardWrap} data-element={"elem2"}>
                       <CardPaymentSteps 
                           img={"images/card1-1.png"}
                           text={"La cuota se descontará de la liquidación semanal de ventas."}
-                      />        
-                  </SwiperSlide>  
-                  <SwiperSlide>
+                      />
+                    </div>
+                    <div className={styles.cardWrap} data-element={"elem2"}>
                       <CardPaymentSteps 
                         img={"images/card1-2.png"}
                         text={"Si no se pudo cobrar el monto total de la cuota, se deducirá de la siguiente liquidación."}
-                    />      
-                  </SwiperSlide>  
-                  <SwiperSlide>
+                    />
+                    </div>
+                    <div className={styles.cardWrap} data-element={"elem2"}>
                       <CardPaymentSteps 
                         img={"images/card1-3.png"}
                         text={"Podrás seguir el progreso de las cuotas desde la sección Finanzas en Partner Portal."}
-                    />     
-                  </SwiperSlide>                                         
-              </SliderComponent>  
+                    />  
+                    </div>
+              </div> 
+
+              <div className={`${styles.wrapSlider} ${styles.mobWrap}`}>
 
 
-                  
- 
-          </div> 
+{/*
+              <SliderComponent amount={1} paginationBoolean={false} loopBoolean={false} >
+                      <SwiperSlide>
+                          <CardPaymentSteps 
+                              img={"images/card1-1.png"}
+                              text={"La cuota se descontará de la liquidación semanal de ventas."}
+                          />        
+                      </SwiperSlide>  
+                      <SwiperSlide>
+                          <CardPaymentSteps 
+                            img={"images/card1-2.png"}
+                            text={"Si no se pudo cobrar el monto total de la cuota, se deducirá de la siguiente liquidación."}
+                        />      
+                      </SwiperSlide>  
+                      <SwiperSlide>
+                          <CardPaymentSteps 
+                            img={"images/card1-3.png"}
+                            text={"Podrás seguir el progreso de las cuotas desde la sección Finanzas en Partner Portal."}
+                        />     
+                      </SwiperSlide>                                         
+                  </SliderComponent>  
 
+*/}
+                      
+    
+              </div> 
 
+          </div>
     </section>  
   );
 };

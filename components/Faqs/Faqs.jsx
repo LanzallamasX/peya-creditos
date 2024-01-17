@@ -16,7 +16,7 @@ const Faqs = ({}) => {
 
   return (
     <section id="faqs" className={styles.faqsContainer}>
-
+      <div className="container">
       <h2>Preguntas frecuentes</h2>
 
         <Accordion className={styles.wrapFaqs}  
@@ -119,6 +119,7 @@ const Faqs = ({}) => {
           </AccordionItem>           
 
         </Accordion>
+        </div>
     </section>
   );
 };

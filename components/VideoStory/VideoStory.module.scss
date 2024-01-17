@@ -10,15 +10,16 @@
      min-height: 100vh;
 
      .wrapVideoStory{
-        background-color: $blue;
+  /*      background-color: $blue; */
         display: flex;
         flex-direction: row;
-        padding: 4rem;
+        padding: 5rem 2.5rem 5rem 2.5rem;
         justify-content: center;
         align-items: center;
         gap: 1rem;
         border-radius: 20px;
-        min-width: 100%;
+        height: 100%;
+
      }
 
      .videoStoryTopText {
@@ -28,14 +29,11 @@
         font-weight: 500;
 
         h2 {
-            font-size: 4.35rem;
-            color: $white;
-            line-height: 100%;
-            padding-bottom: 1rem;
+            color: $blue;
+            padding-bottom: 2rem;
         }
          p {
-             font-size: 1.25rem;
-             color: $white;
+             color: $dark;
              line-height: 100%;
              font-family: TextaAltaMedium;
          }
@@ -43,43 +41,19 @@
 
      }
 
-     .videoContainer {
-        position: relative;
-        width: 80%;
-        height: 100%;
-        align-self: center;
+     iframe{
+        border-radius: 20px;
 
-        .wrapIframe{
-            position: relative;
-            width: 100%;
-            height: 550px;
-            padding-bottom: 50%;
-
-            overflow: hidden;
-            align-self: center;
-            display: flex;
-        }
-
-        iframe {
-            left: 0px;
-            top: 0px;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            align-self: center;
-        }
-    }
-
-     .videoStoryCardsMainContainer {
-         min-width: 100%;
-         width: fit-content;
-         display: flex;
-         justify-content: center;
-         gap: 2em;
-         align-items: stretch;
      }
+
+ 
  }
 
+
+ @media (max-width: 768px) {
+
+
+ }
 
 
 
@@ -88,8 +62,6 @@
 
 
      .videoStoryContainer {
-
-        padding-inline: 3%;
 
 
 
@@ -104,10 +76,6 @@
             width: 100%;
             text-align: center;
 
-             h2 {
-                 font-size: 1.875rem;
-                 line-height: 1em;
-             }
 
              p {
                  font-size: 1.25rem;
@@ -122,8 +90,6 @@
 
             .wrapIframe{
                 position: relative;
-                width: 100%;
-                height: 350px;
                 padding-bottom: 0px;
                 overflow: hidden;
                 align-self: center;
@@ -132,12 +98,10 @@
     
             iframe {
                 width: 100%;
-                height: 350px;
             }
         }         
 
          .videoStoryCardsMainContainer {
-             min-width: 100%;
              display: flex;
              flex-direction: column;
              align-items: center;

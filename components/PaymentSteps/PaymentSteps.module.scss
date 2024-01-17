@@ -7,18 +7,25 @@
   align-items: center;
 
   .wrapCardsPaymentSteps{
+    width: 90%; max-width: 90%;
+    max-height: 700px;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+  
     display: flex;
-    gap: 1rem;
-    height: 0;
+    gap: 4rem;
+    flex-direction: row;
+    justify-content: center;
+   align-self: center;
   }
   
   h2{
     font-family: textaBold;
     width: 100%;
-    font-size: 3.75rem;
-    line-height: 1;
     font-weight: 400;
     padding-top: 4rem;
+    padding-bottom: 4rem;
 
     b {
       font-family: textaHeavy;
@@ -32,6 +39,13 @@
     padding-bottom: 2rem;
   }
 
+  .cardWrap{
+
+        width: 33%;
+        flex-shrink: 1;
+        flex-grow: 1;
+    
+  }
 
 
 .cards{
