@@ -48,14 +48,15 @@
             text-align: center;
 
             img{
-                z-index: 2;
+                z-index: 1; 
                 position: relative;
             }
         }
 
         .card1img::before {
+            
             top: 12%;
-            background-color: #6D99F2;
+            background-color: #6D99F2A0;
             display: block;
             height: 67%;
             width: calc(100% - 28px);
@@ -92,6 +93,7 @@
         .card1{
             flex-direction: column;
             background-color: #E2EBFF;
+            height: 75vh;
 
     
             p{

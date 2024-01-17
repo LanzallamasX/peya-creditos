@@ -22,7 +22,7 @@ const PaymentSteps = () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             scroller: contanierPayments,
-            start: "bottom bottom-=250",
+            start: "bottom bottom-=100",
             end: "bottom top",
             pin: true,
             smooth: 5,
@@ -35,8 +35,8 @@ const PaymentSteps = () => {
         panelsAnim.forEach((panel, i) => {
           if (i === 0) return;
           tl.fromTo(panel, {
-            yPercent: 100, duration: i * 0.3, ease: "none"
-          }, {yPercent: 0});
+            yPercent: 100, duration: i * 0.3, zIndex: 1, ease: "none"
+          }, {yPercent: 0, zIndex: 3});
     
         });  
 
@@ -53,7 +53,7 @@ const PaymentSteps = () => {
 
 
   return (    
-    <section id="paymentSteps" ref={containerPayments}  className={styles.PaymentStepsContainer}>
+    <section id="paymentSteps"  className={styles.PaymentStepsContainer}>
 
       <div className="container flex flex-col " ref={containerPayments}>
 
