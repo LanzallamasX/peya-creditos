@@ -21,7 +21,7 @@ const videoStory = () => {
       <div className="container">
           <div className={styles.wrapVideoStory}>
             <div className={styles.videoStoryTopText}>
-              <h2>Una historia real <b>de crecimiento.</b></h2>
+              <h2>Una historia real <b>de crecimiento</b></h2>
               <p>Conocé la historia de Juan, <br /> dueño en <i>Cata, tienda de calzone</i></p>
             </div>
 

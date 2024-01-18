@@ -112,6 +112,7 @@ const CreditRequest = () => {
 
             <MainButton
                 color="buttonRed"
+                text = "Simular crédito"
 
             />
         </div>

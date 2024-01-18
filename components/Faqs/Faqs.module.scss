@@ -37,11 +37,19 @@
         padding-bottom: 4px;
         gap: 0.75rem;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
         
-
+        div {
+            span {
+                div{
+                    display: flex;
+                    text-align: left;
+                    line-height: 1.5;
+                }
+            }
+        }
 
         h2{
             font-size: 1.35rem;
@@ -89,7 +97,13 @@
      }
 
 
-     
+     .text-foreground {
+
+        div{
+            display: flex;
+        }
+        
+     }
 
  }
 

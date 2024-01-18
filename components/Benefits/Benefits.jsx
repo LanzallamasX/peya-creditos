@@ -57,22 +57,22 @@ const Benefits = ({fn}) => {
             <h2>El mejor crédito, porque <b>tu negocio</b> se lo merece</h2>
             <div className={styles.benefitsList}>
               <ItemBenefit
-                text={"Pídelo online, sin papeles."}
+                text={"Pedilo online, sin papeles."}
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono sin burocracia"}
               />
               <ItemBenefit
-                text={"Elige monto y cuotas."}
+                text={"Elegí monto y cuotas."}
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono internacional"}
               />
               <ItemBenefit
-                text={"Recíbelo en menos de 48hs hábiles."}
+                text={"Recibilo en menos de 48hs hábiles."}
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono descuentos"}
               />
               <ItemBenefit
-                text={"Las cuotas se debitan automáticamente de tus ventas."}
+                text={"Las cuotas se debitan directamente de tus ventas."}
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono descuentos"}
               />  
@@ -80,6 +80,7 @@ const Benefits = ({fn}) => {
                   <MainButton                  
                   color="buttonRed"
                   eventClick={"Click benefit"}
+                  text={'Simular crédito'}
                 />        
               </div>
             </div>

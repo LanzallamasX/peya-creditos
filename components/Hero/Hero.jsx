@@ -38,7 +38,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                     <h1>{data.title}</h1>
                     <h3>{data.subtitle}</h3>
 
-                    <MainButton href={data.buttonLink} eventClick={"clickHero"} />
+                    <MainButton href={data.buttonLink} eventClick={"clickHero"} text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>
                         Más información
@@ -62,7 +62,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                     <h1>{data.title}</h1>
                     <h3>{data.subtitle}</h3>
 
-                    <MainButton href={data.buttonLink} fn={fn} />
+                    <MainButton href={data.buttonLink}  text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>
                         Más información

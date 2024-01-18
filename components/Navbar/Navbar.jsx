@@ -45,28 +45,28 @@ const Navbar = ({ fn }) => {
             <a href="#hero">Home</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#videoStorySection">Historias</a>
+            <a href="#videoStorySection">Testimonios</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#benefitsSection">Valor extendido</a>
+            <a href="#benefitsSection">Características</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#usos">usos</a>
+            <a href="#usos">Cómo usarlo</a>
           </li>
           <li onClick={hideNavMenu}>
             <a href="#RequirementsSection">requisitos</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#creditRequest">pasos</a>
+            <a href="#creditRequest">Cómo pedirlo</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#paymentSteps">como pagar</a>
+            <a href="#paymentSteps">Cómo pagarlo</a>
           </li>   
           <li onClick={hideNavMenu}>
-            <a href="#testimonialsSection">testimonios</a>
+            <a href="#testimonialsSection">Testimonios</a>
           </li>   
           <li onClick={hideNavMenu}>
-            <a href="#faqs">preguntas frecuentes</a>
+            <a href="#faqs">Preguntas Frecuentes</a>
           </li>                                                  
         </ul>
       </div>
