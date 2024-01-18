@@ -113,6 +113,7 @@ const CreditRequest = () => {
             <MainButton
                 color="buttonRed"
                 text = "Simular crédito"
+                eventClick = "credit_selection.proceeded"
 
             />
         </div>

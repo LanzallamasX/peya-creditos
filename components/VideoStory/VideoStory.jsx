@@ -1,20 +1,8 @@
 import styles from "./VideoStory.module.scss";
 
-const videoStory = () => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-  };
 
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-  };
+const videoStory = () => {
+
 
   return (
     <section id="videoStorySection" className={styles.videoStoryContainer}>

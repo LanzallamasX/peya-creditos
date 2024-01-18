@@ -79,8 +79,8 @@ const Benefits = ({fn}) => {
                 <div className={styles.wrapMainBtn}>
                   <MainButton                  
                   color="buttonRed"
-                  eventClick={"Click benefit"}
                   text={'Simular crédito'}
+                  eventClick={"credit_selection.proceeded"}
                 />        
               </div>
             </div>
