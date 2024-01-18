@@ -9,29 +9,28 @@ const MainButton = ({
   text = "Simular mi crédito",
   fn,
 }) => {
+  const handleClick = () => {
+    // Coloca cualquier lógica adicional que desees ejecutar antes de enviar el evento
+    // ...
+
+    // Envía el evento a dataLayer
+    window.dataLayer.push({'event': 'button1-click'});
+
+    // Llama a la función adicional si está presente
+    if (fn) {
+      fn();
+    }
+  };
+
   return (
     <>
-      {href === "tableAction" ? (
-        <button id={id} className={`${styles.mainButton} ${styles[color]}`}>
-          {text}
-        </button>
-      ) : !isMobile && fn ? (
-        <button
-          id={id}
-          className={`${styles.mainButton} ${styles[color]}`}
-          onClick={fn}
-        >
-          {text}
-        </button>
-      ) : (
-        <Link
-          href={href}
-          id={id}
-          className={`${styles.mainButton} ${styles[color]}`}
-        >
-          {text}
-        </Link>
-      )}
+      <button
+        id={id}
+        className={`${styles.mainButton} ${styles[color]}`}
+        onClick={handleClick}
+      >
+        {text}
+      </button>
     </>
   );
 };

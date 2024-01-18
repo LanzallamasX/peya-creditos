@@ -77,8 +77,7 @@ const Benefits = ({fn}) => {
                 imgAlt={"Icono descuentos"}
               />  
                 <div className={styles.wrapMainBtn}>
-                  <MainButton
-                  fn={fn}
+                  <MainButton                  
                   color="buttonRed"
                 />        
               </div>
