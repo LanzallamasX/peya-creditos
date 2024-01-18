@@ -27,6 +27,13 @@ import PopUp from "../components/PopUp/PopUp";
 import { AnimatePresence } from "framer-motion";
 import PopUpTyC from "../components/PopUpTyC/PopUpTyC";
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.refresh();
+
+
 const Home = ({ heroDataFromDB, promoDataFromDB }) => {
   const [showPopUp, setShowPopUp] = useState(false);
   const [showTyCPopUp, setShowTyCPopUp] = useState(false);

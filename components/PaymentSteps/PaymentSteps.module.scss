@@ -1,13 +1,11 @@
 
-.PaymentStepsContainer{
+.paymentStepsContainer{
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   overflow: hidden;
-  padding-bottom: 7rem;
 
   .wrapCardsPaymentSteps{
     width: 90%; max-width: 90%;
@@ -80,7 +78,7 @@
 
 
 @media (max-width: 768px) {
-  .PaymentStepsContainer{
+  .paymentStepsContainer{
 
 
     .cardWrap{

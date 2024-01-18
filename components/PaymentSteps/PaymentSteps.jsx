@@ -1,64 +1,66 @@
-import { useRef, useEffect } from "react";
 import styles from "./PaymentSteps.module.scss";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import CardPaymentSteps from "../CardPaymentSteps/CardPaymentSteps";
 
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const PaymentSteps = () => {
-  const containerPayments = useRef();
+  const container2 = useRef();
+  const wrapcontainer = container2.current;
 
-  const wrapContanierPayments = containerPayments.current;
-  
-  const tl2 = useRef();
 
   useEffect(() => {
-      const panelsAnim = gsap.utils.toArray('[data-element="elem2"]');   
+    if (container2.current) {
 
-      let ctx2 = gsap.context(() => {
-        const tl2 = gsap.timeline({
-          scrollTrigger: {
-            scroller: wrapContanierPayments,
-            start: "bottom bottom-=100",
-            end: "bottom top",
-            smooth: 5,
-            scrub: true,
-            markers: true,
-            pin: true,
-          },
-        });
-  
-        // Aplica animación a cada panel
-        panelsAnim.forEach((panel, i) => {
-          if (i === 0) return;
-          tl2.fromTo(panel, {
-            yPercent: 100, duration: i * 0.3, zIndex: 1, ease: "none"
-          }, {yPercent: 0, zIndex: 3});
+    const panels2 = gsap.utils.toArray('[data-element="elem2"]');
+
+    let ctx2 = gsap.context(() => {
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: container2.current,
+        start: "top",
+        end: "bottom",
+        pin: true,
+        smooth: 5,
+        scrub: true,
+        markers: false,
+      },
+    });
+    console.log(container2.current)
+
+
+    panels2.forEach((panel, i) => {
+      if (i === 0) return;
+      tl2.fromTo(panel, {
+        yPercent: 150, duration: i * 0.3, ease: "none"
+      }, {yPercent: 0});
+
+    });      
+
+
+    }, container2); // <- scopes all selector text inside the context to this component (optional, default is document)
     
-        });  
 
-      }, containerPayments); 
-      ScrollTrigger.refresh();
 
-      return () => ctx2.revert(); 
-    }, []);
+    return () => ctx2.revert(); // cleanup! 
+    
+  }
 
+  }, []);
+  ScrollTrigger.refresh();
 
 /*  ---------  */    
     
-  
-
 
   return (    
-    <section id="paymentSteps" ref={wrapContanierPayments} className={styles.PaymentStepsContainer}>
+    <section id="paymentSteps" ref={container2} className={styles.paymentStepsContainer}>
 
-      <div className="container flex flex-col " >
-
+      <div className="container flex flex-col" >
               <h2>Paga las cuotas <b>con tus ventas</b></h2>
-              <div className={`${styles.wrapCardsPaymentSteps} `}>
+              <div className={styles.wrapCardsPaymentSteps}>
                    <div className={styles.cardWrap} data-element={"elem2"}>
                       <CardPaymentSteps 
                           img={"images/card1-1.png"}
@@ -78,11 +80,6 @@ const PaymentSteps = () => {
                     />  
                     </div>
               </div> 
-
-              <div className={`${styles.wrapSlider} ${styles.mobWrap}`}>
-                          
-              </div> 
-
           </div>
     </section>  
   );

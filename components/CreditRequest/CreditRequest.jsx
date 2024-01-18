@@ -7,9 +7,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 // Registra los plugins al importarlos
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-
 const CreditRequest = () => {
   const container = useRef();
   const wrapcontainer = container.current;
@@ -19,19 +16,20 @@ const CreditRequest = () => {
     if (container.current) {
 
     const panels = gsap.utils.toArray('[data-element="elem1"]');
-    let ctx = gsap.context(() => {
 
+    let ctx = gsap.context(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container.current,
         start: "top",
-        end: "max",
+        end: "bottom",
         pin: true,
         smooth: 5,
         scrub: true,
         markers: false,
       },
     });
+    console.log(container.current)
 
 
     panels.forEach((panel, i) => {
@@ -45,7 +43,6 @@ const CreditRequest = () => {
 
     }, container); // <- scopes all selector text inside the context to this component (optional, default is document)
     
-    ScrollTrigger.refresh();
 
 
     return () => ctx.revert(); // cleanup! 
@@ -53,6 +50,7 @@ const CreditRequest = () => {
 
   }, []);
 
+  ScrollTrigger.refresh();
 
 
   return (    
