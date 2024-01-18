@@ -35,7 +35,7 @@ const CreditRequest = () => {
     panels.forEach((panel, i) => {
       if (i === 0) return;
       tl.fromTo(panel, {
-        yPercent: 150, duration: i * 0.3, ease: "none"
+        yPercent: 130, duration: i * 0.3, ease: "none"
       }, {yPercent: 0});
 
     });      

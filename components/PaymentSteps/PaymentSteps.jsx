@@ -35,8 +35,8 @@ const PaymentSteps = () => {
     panels2.forEach((panel, i) => {
       if (i === 0) return;
       tl2.fromTo(panel, {
-        yPercent: 150, duration: i * 0.3, ease: "none"
-      }, {yPercent: 0});
+        yPercent: 130, duration: i * 0.3, ease: "none", zIndex: "1"
+      }, {yPercent: 0, zIndex: "1"});
 
     });      
 
