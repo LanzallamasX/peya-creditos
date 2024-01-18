@@ -19,7 +19,7 @@ const PaymentSteps = () => {
       const panelsAnim = gsap.utils.toArray('[data-element="elem2"]');   
 
       let ctx2 = gsap.context(() => {
-        const tl = gsap.timeline({
+        const tl2 = gsap.timeline({
           scrollTrigger: {
             scroller: contanierPayments,
             start: "bottom bottom-=100",
@@ -34,7 +34,7 @@ const PaymentSteps = () => {
         // Aplica animación a cada panel
         panelsAnim.forEach((panel, i) => {
           if (i === 0) return;
-          tl.fromTo(panel, {
+          tl2.fromTo(panel, {
             yPercent: 100, duration: i * 0.3, zIndex: 1, ease: "none"
           }, {yPercent: 0, zIndex: 3});
     

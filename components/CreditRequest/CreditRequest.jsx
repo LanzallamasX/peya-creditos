@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CreditRequest = () => {
   const container = useRef();
+  const wrapcontainer = container.current;
 
 
   useEffect(() => {
