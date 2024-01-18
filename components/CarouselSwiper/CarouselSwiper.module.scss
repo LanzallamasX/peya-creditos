@@ -1,9 +1,9 @@
 .usosContainer{
   text-align: center;
-  height: 80vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  min-height: 80vh;
 
   h2{
     font-family: textaBold;

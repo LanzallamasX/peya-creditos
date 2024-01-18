@@ -53,6 +53,7 @@
       }
 
 
+
      .rightTesimonials {
          width: 100%;
          display: flex;
@@ -63,7 +64,7 @@
          h2 {
             font-family: textaRegular;
              width: 100%;
-             font-size: 3.75rem;
+             font-size: clamp(1.875rem, 3.75vw, 3.75rem); 
              line-height: 3.75rem;
              font-weight: 400;
 
@@ -83,6 +84,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-right: 5rem;
+
         
     }
 
@@ -92,12 +95,15 @@
         align-items: center;
         gap: 1rem;
         border-top: 1px solid $blue;
+        width: 100%;
         margin-top: 2.5rem;
 
      }
 
      .odometerWrpBf{
         font-size: 140px ;
+        font-size: clamp(1.875rem, 8.75vw, 8.75rem); 
+
         display: inline-block;
         color: $blue;
         line-height: 80%;
@@ -106,17 +112,18 @@
 
 
      .odometer{
-        font-size: 155px;
-        font-family: textaBlack;
+      font-size: clamp(3.75rem, 9.68vw, 9.68rem); 
+      font-family: textaBlack;
         color: $blue;
      }
 
     .odometerText{
-        font-size: 65px;
+      font-size: clamp(1.8rem, 3.2vw, 4rem); 
         font-family: textaBlack;
         color: $blue;
         padding-bottom: 1rem;
         border-bottom: 1px solid $blue;
+        width: 100%;
         text-align: center;
 
     }
@@ -138,6 +145,7 @@
 
       .wrapOdometer{
          width: 100%;
+         padding-right: 0%;
 
            
        }
@@ -153,11 +161,11 @@
       }
 
       .odometer{
-         font-size: 7rem;
+         font-size: clamp(3.75rem, 9.68vw, 9.68rem); 
       }
 
       .odometerText{
-         font-size: 2.3rem;
+         font-size: clamp(1.8rem, 3.2vw, 4rem); 
          font-family: TextaAltaMedium;
 
       }

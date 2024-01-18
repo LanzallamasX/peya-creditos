@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const PaymentSteps = () => {
   const containerPayments = useRef();
 
-  const contanierPayments = containerPayments.current;
+  const wrapContanierPayments = containerPayments.current;
   
   const tl2 = useRef();
 
@@ -21,13 +21,13 @@ const PaymentSteps = () => {
       let ctx2 = gsap.context(() => {
         const tl2 = gsap.timeline({
           scrollTrigger: {
-            scroller: contanierPayments,
+            scroller: wrapContanierPayments,
             start: "bottom bottom-=100",
             end: "bottom top",
-            pin: true,
             smooth: 5,
             scrub: true,
             markers: true,
+            pin: true,
           },
         });
   
@@ -53,9 +53,9 @@ const PaymentSteps = () => {
 
 
   return (    
-    <section id="paymentSteps"  className={styles.PaymentStepsContainer}>
+    <section id="paymentSteps" ref={wrapContanierPayments} className={styles.PaymentStepsContainer}>
 
-      <div className="container flex flex-col " ref={containerPayments}>
+      <div className="container flex flex-col " >
 
               <h2>Paga las cuotas <b>con tus ventas</b></h2>
               <div className={`${styles.wrapCardsPaymentSteps} `}>

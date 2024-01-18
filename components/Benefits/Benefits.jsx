@@ -79,6 +79,7 @@ const Benefits = ({fn}) => {
                 <div className={styles.wrapMainBtn}>
                   <MainButton                  
                   color="buttonRed"
+                  eventClick={"Click benefit"}
                 />        
               </div>
             </div>

@@ -8,13 +8,15 @@ const MainButton = ({
   color = "buttonBlue",
   text = "Simular mi crédito",
   fn,
+  eventClick
 }) => {
   const handleClick = () => {
     // Coloca cualquier lógica adicional que desees ejecutar antes de enviar el evento
     // ...
 
     // Envía el evento a dataLayer
-    window.dataLayer.push({'event': 'button1-click'});
+    window.dataLayer.push({'event': eventClick});
+    //console.log({'event': eventClick});
 
     // Llama a la función adicional si está presente
     if (fn) {
