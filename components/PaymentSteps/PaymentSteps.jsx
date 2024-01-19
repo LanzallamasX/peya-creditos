@@ -57,7 +57,7 @@ const PaymentSteps = () => {
     <section id="paymentSteps" ref={container2} className={styles.paymentStepsContainer}>
 
       <div className="container flex flex-col" >
-              <h2>Paga las cuotas <b>con tus ventas</b></h2>
+              <h2>Pagá las cuotas <b>con tus ventas</b></h2>
               <div className={styles.wrapCardsPaymentSteps}>
                    <div className={styles.cardWrap} data-element={"elem2"}>
                       <CardPaymentSteps 

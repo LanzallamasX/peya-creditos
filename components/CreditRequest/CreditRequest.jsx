@@ -86,7 +86,7 @@ const CreditRequest = () => {
                                   imgDesk={"images/steps/Paso-3_dk.jpg"}
                                   imgMob={"images/steps/paso3.png"}
                                   title={"Aceptá T&C"}
-                                  text={"heck de la declaración jurada y términos & condiciones."}
+                                  text={"Check de la declaración jurada y términos & condiciones."}
                                   color={"cardBlue"}
                                   lineColor={"lineWhite"}
                             />    
