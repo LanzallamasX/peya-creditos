@@ -34,42 +34,46 @@ const Navbar = ({ fn }) => {
           }
           alt="Ir al inicio"
         />
-      </a>
+     </a>
+      <div className={styles.linksContainer}>
+        <ul className={styles.linksContainerList}>
+          <li>
+            <a href="#faqs">Ayuda</a>
+          </li>
+        </ul>
+          <MainButton eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 0'} 
+            
+            />
+      </div>
 
+      {/*}
       <button id="hideMenuButton" className={styles.menuNavbar}>
-        <AiOutlineMenu color="#004ADD" size={40} />
+        <AiOutlineMenu color="#ffffff" size={40} />
       </button>
       <div id="hideMenuContainer" className={styles.hiddenMenuContainer}>
         <ul className={styles.hiddenLinksContainerList}>
           <li onClick={hideNavMenu}>
-            <a href="#hero">Home</a>
+            <a href="#cashbackSection">Cashback</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#videoStorySection">Testimonios</a>
+            <a href="#benefitsSection">Beneficios</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#benefitsSection">Características</a>
+            <a href="#secureCardSection">Tarjeta</a>
           </li>
           <li onClick={hideNavMenu}>
-            <a href="#usos">Cómo usarlo</a>
+            <a href="#pricesSection">Costos</a>
           </li>
-          <li onClick={hideNavMenu}>
-            <a href="#RequirementsSection">requisitos</a>
-          </li>
-          <li onClick={hideNavMenu}>
-            <a href="#creditRequest">Cómo pedirlo</a>
-          </li>
-          <li onClick={hideNavMenu}>
-            <a href="#paymentSteps">Cómo pagarlo</a>
-          </li>   
-          <li onClick={hideNavMenu}>
-            <a href="#testimonialsSection">Testimonios</a>
-          </li>   
-          <li onClick={hideNavMenu}>
-            <a href="#faqs">Preguntas Frecuentes</a>
-          </li>                                                  
         </ul>
+        <MainButton
+          href={
+            "https://pwdh.adj.st/fintech/cards/redirector?adj_t=6t2xp9f_a7g3qbs&adj_deep_link=pedidosya%3A%2F%2Ffintech%2Fcards%2Fredirector&adj_campaign=Landing&adj_adgroup=CTA&adj_creative=Header"
+          }
+          color="navbar"
+        />
       </div>
+
+      */}
     </nav>
   );
 };

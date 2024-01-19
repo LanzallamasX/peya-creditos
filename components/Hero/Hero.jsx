@@ -38,7 +38,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                     <h1>{data.title}</h1>
                     <h3>{data.subtitle}</h3>
 
-                    <MainButton href={data.buttonLink}
+                    <MainButton 
                                 eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 1'} 
                                 text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
@@ -64,7 +64,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                     <h1>{data.title}</h1>
                     <h3>{data.subtitle}</h3>
 
-                    <MainButton href={data.buttonLink} eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 1'} 
+                    <MainButton  eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 1'} 
                       text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>

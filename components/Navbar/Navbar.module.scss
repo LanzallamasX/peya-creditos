@@ -12,8 +12,9 @@
     padding-block: 0em;
     padding-inline: 1rem;
 
+
     img{
-        width: 250px;
+        width: 280px;
         height: auto;
     }
 
@@ -22,16 +23,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2em;
+        gap: 0.75em;
 
         .linksContainerList {
             width: fit-content;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 2em;
-            padding-inline: 3em;
-            color: $white;
+            gap: 0.5em;
+            padding-inline: 0.2em;
+            color: $blue;
 
             li {
                 display: inline-block;
@@ -84,7 +85,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 3em;
+            gap: 0.5em;
 
             li {
                 font-family: textaHeavy;
@@ -99,16 +100,16 @@
 
     .navbar {
         img {
-            width: 50%;
+            width: 130px;
             height: auto;
         }
 
         
-
+/*
         .linksContainer {
             display: none;
         }
-
+*/
         .menuNavbar {
             width: fit-content;
             display: contents;

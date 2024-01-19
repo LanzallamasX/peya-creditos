@@ -8,7 +8,7 @@ const videoStory = () => {
 
   return (
     <section id="videoStorySection" className={styles.videoStoryContainer}>
-      <div className="container">
+      <div className="container flex justify-center	">
           <div className={styles.wrapVideoStory}>
             <div className={styles.videoStoryTopText}>
               <h2>Una historia real <b>de crecimiento</b></h2>
