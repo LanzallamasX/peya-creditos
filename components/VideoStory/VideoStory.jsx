@@ -1,7 +1,9 @@
 import styles from "./VideoStory.module.scss";
+import { useState, useEffect, useRef } from 'react';
 
 
 const videoStory = () => {
+
 
 
   return (
@@ -14,6 +16,7 @@ const videoStory = () => {
             </div>
 
             <div className="h-[40vh] md:h-[30vh] lg:h-[35vh] xl:h-[50vh] sm:w-[90vw] w-[90vw] md:w-[50vw] lg:w-[40vw] xl:w-[45vw]   relative overflow-hidden mt-4">
+      
               <iframe
                 width="853"
                 height="480"

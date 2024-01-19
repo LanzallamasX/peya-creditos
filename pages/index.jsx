@@ -8,12 +8,6 @@ import CreditRequest from "../components/CreditRequest/CreditRequest";
 import PaymentSteps from "../components/PaymentSteps/PaymentSteps";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Faqs from "../components/Faqs/Faqs";
-
-import SecureCard from "../components/SecureCard/SecureCard";
-import Membership from "../components/Membership/Membership";
-import PromoCarousel from "../components/PromoCarousel/PromoCarousel";
-import Steps from "../components/Steps/Steps";
-import Prices from "../components/Prices/Prices";
 import Hero from "../components/Hero/Hero";
 import {
   collection,
@@ -76,7 +70,7 @@ const Home = ({ heroDataFromDB, promoDataFromDB }) => {
         <Requirements />
         <CreditRequest />  
         <PaymentSteps />
-        <Testimonials />        
+        <Testimonials />      
         <Faqs />
 
       </main>

@@ -11,7 +11,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-    console.log(imagesArray);
+//    console.log(imagesArray);
   }, []);
 
 
@@ -38,7 +38,9 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                     <h1>{data.title}</h1>
                     <h3>{data.subtitle}</h3>
 
-                    <MainButton href={data.buttonLink} eventClick={"credit_selection.proceeded"} text={'Simular crédito'} />
+                    <MainButton href={data.buttonLink}
+                                eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 1'} 
+                                text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>
                         Más información
@@ -62,7 +64,8 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                     <h1>{data.title}</h1>
                     <h3>{data.subtitle}</h3>
 
-                    <MainButton href={data.buttonLink} eventClick={"credit_selection.proceeded"}  text={'Simular crédito'} />
+                    <MainButton href={data.buttonLink} eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 1'} 
+                      text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>
                         Más información

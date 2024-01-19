@@ -4,7 +4,7 @@ import CardCreditRequest from "../CardCreditRequest/CardCreditRequest";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-// Registra los plugins al importarlos
+
 gsap.registerPlugin(ScrollTrigger);
 
 const CreditRequest = () => {
@@ -29,7 +29,6 @@ const CreditRequest = () => {
         markers: false,
       },
     });
-    console.log(container.current)
 
 
     panels.forEach((panel, i) => {
@@ -41,10 +40,8 @@ const CreditRequest = () => {
     });      
 
 
-    }, container); // <- scopes all selector text inside the context to this component (optional, default is document)
+    }, container); 
     
-
-
     return () => ctx.revert(); // cleanup! 
   }
 
@@ -113,9 +110,11 @@ const CreditRequest = () => {
             <MainButton
                 color="buttonRed"
                 text = "Simular crédito"
-                eventClick = "credit_selection.proceeded"
-
+                eventClick={"credit_selection.proceeded"}
+                userid={'User ?'}
+                bannerNumber={'bannerNumber 3'} 
             />
+
         </div>
     </section>  
   );

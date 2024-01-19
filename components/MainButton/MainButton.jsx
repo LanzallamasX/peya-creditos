@@ -8,13 +8,15 @@ const MainButton = ({
   color = "buttonBlue",
   text = "Simular mi crédito",
   fn,
-  eventClick
+  eventClick,
+  userid,
+  bannerNumber
 }) => {
   
   const handleClick = () => {
     
-    window.dataLayer.push({'event': eventClick});
-    console.log({'event': eventClick});
+    window.dataLayer.push({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
+    console.log({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
 
     if (fn) {
       fn();

@@ -29,8 +29,6 @@ const PaymentSteps = () => {
         markers: false,
       },
     });
-    console.log(container2.current)
-
 
     panels2.forEach((panel, i) => {
       if (i === 0) return;
@@ -41,7 +39,7 @@ const PaymentSteps = () => {
     });      
 
 
-    }, container2); // <- scopes all selector text inside the context to this component (optional, default is document)
+    }, container2); 
     
 
 
