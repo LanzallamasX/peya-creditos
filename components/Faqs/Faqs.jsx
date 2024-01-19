@@ -24,8 +24,9 @@ const Faqs = ({}) => {
                       Si terminás de pagar tu crédito y seguís vendiendo activamente, podrás acceder a un nuevo crédito.
         `,
         event: 'credit_more_info.clicked',
-        questionClicked: 'isOnline',
-        userId: 'userId ?',
+        faqUser: 'userId -',
+        questionEvent: 'isOnline',
+
     },
     {
       key: "2",
@@ -34,8 +35,9 @@ const Faqs = ({}) => {
         `Podés solicitar un crédito de PedidosYa <strong> desde el lugar en el que te encuentres. Recibirás el dinero en tu cuenta bancaria en un máximo de 48 horas hábiles</strong> posteriores a la solicitud del crédito.<br />
         <strong> La solicitud es segura, online y fácil</strong>, conoce más detalles en los <a href="https://creditos.pedidosya.com/terminos-y-condiciones" title="Términos y condiciones de PedidosYA Créditos" target="_blank"><strong>Términos y condiciones</strong></a> de PedidosYa Créditos.`,
         event: 'credit_more_info.clicked',
-        questionClicked: 'fixedInstallment',
-        userId: 'userId ?',
+        faqUser: 'userId -',
+        questionEvent: 'fixedInstallment',
+
     },
     {
       key: "3",
@@ -43,8 +45,9 @@ const Faqs = ({}) => {
       content:
         `El dinero <strong> recibirás en la cuenta bancaria asociada a tu contrato con PedidosYa.</strong> La misma en la que recibes la liquidación por tus ventas semanales.`,
         event: 'credit_more_info.clicked',
-        questionClicked: 'moneyPlacement',
-        userId: 'userId ?',
+        faqUser: 'userId -',
+        questionEvent: 'moneyPlacement',
+
     },
     {
       key: "4",
@@ -54,18 +57,17 @@ const Faqs = ({}) => {
         Las cuotas<strong> serán consideradas como pagas cuando se realice el cobro total</strong>. Si en la liquidación semanal de ventas no se pudo realizar el cobro total de la cuota,<strong> se descontará de la siguiente liquidación hasta alcanzar el monto total a cobrar</strong>.<br />                          
         Y<strong> si quieres completar el pago de la cuota antes del cierre de la siguiente liquidación, podrás realizar una transferencia bancaria</strong> a la cuenta indicada en la solapa Créditos, dentro de la sección Finanzas en Partner Portal.`,
         event: 'credit_more_info.clicked',
-        questionClicked: 'howIsPaid',
-        userId: 'userId ?',
+        faqUser: 'userId -',
+        questionEvent: 'howIsPaid',
+
     },
   ];
 
 
-  const handleFaqsClick = (eventClick, userid, questionClicked) => {
+  const handleFaqsClick = (event, faqUser, questionEvent) => {
     
-    window.dataLayer.push({'event': eventClick, 'userId': userid, 'questionClicked': questionClicked,});
-    console.log({'event': eventClick, 'userId': userid, 'questionClicked': questionClicked,});    
-
-  
+    window.dataLayer.push({'event': event, 'questionClicked': questionEvent, 'userId': faqUser});
+              console.log({'event': event, 'questionClicked': questionEvent, 'userId': faqUser});    
   }; 
 
   const itemClasses = {
@@ -126,7 +128,7 @@ const Faqs = ({}) => {
             <AccordionItem 
               className={styles.button}
               onPress={() =>
-                handleFaqsClick(faq.event, faq.questionClicked, faq.userId)
+                handleFaqsClick(faq.event, faq.questionEvent, faq.faqUser)                
               }
               key={faq.key}
               aria-label={`Accordion ${faq.key}`}
@@ -143,5 +145,6 @@ const Faqs = ({}) => {
     </section>
   );
 };
+
 
 export default Faqs;

@@ -29,7 +29,7 @@ const Navbar = ({ fn }) => {
         <img
           src={
             windowWidth > 500
-              ? "/images/pedidos-ya-creditos.png"
+              ? "/images/pedidos-ya-creditos-desk.png"
               : "/images/pedidos-ya-creditos.png"
           }
           alt="Ir al inicio"
