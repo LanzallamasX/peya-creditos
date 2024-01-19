@@ -3,7 +3,7 @@ import styles from "./MainButton.module.scss";
 import { isMobile } from "react-device-detect";
 
 const MainButton = ({
-  href = "",
+  href = "https://pedidosya.portal.restaurant/finance-py/credits-redirect?contractId={{contrato}}&",
   id,
   color = "buttonBlue",
   text = "Simular mi crédito",

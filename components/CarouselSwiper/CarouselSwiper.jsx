@@ -36,14 +36,23 @@ const CarouselSwiper = () => {
   // Calcular 'amount' basado en el ancho de la ventana
   const amount = windowWidth < 768 ? "1" : "5";
 
+
+  function handleSwipeAction () {
+
+    
+    window.dataLayer.push({'event': "carousel.swipe", 'userId': 'User ?',});
+    console.log({'event': "carousel.swipe", 'userId': 'User ?',});
+    
+  }
+
+
   return (    
     <div id="usos" className={styles.usosContainer}>
       <div>
         <h2>¿Para qué lo podés usar?</h2>
         <p>Usalo para lo que necesites</p>
         <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true}
-          eventClick={"carousel.swipe"} userId={'User ?'} 
-        
+        onClick={handleSwipeAction}
         >
           
               <SwiperSlide>

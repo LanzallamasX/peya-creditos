@@ -7,19 +7,7 @@ import "swiper/css/pagination";
 
 
 
-const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position, eventClick, userId}) => {
-
-
-
-  function handleSwipeAction () {
-
-    /*
-    dataLayer.push({'event': eventClick, 'userId': userId,});
-    console.log({'event': eventClick, 'userId': userId,});
-
-    */
-  }
-
+const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position}) => {
 
   return (
     <Swiper
@@ -35,7 +23,6 @@ const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean,
       }}
       loop={loopBoolean}
       id={id}
-      onSlideChange={() => {handleSwipeAction()}}
     >
       {children}
       
