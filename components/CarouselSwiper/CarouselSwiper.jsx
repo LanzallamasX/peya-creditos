@@ -4,6 +4,7 @@ import SliderComponent from "../SliderComponent/SliderComponent";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import TagManager from 'react-gtm-module';
 
 const CarouselSwiper = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -24,6 +25,9 @@ const CarouselSwiper = () => {
     // Llamar a handleResize al cargar la página para obtener el tamaño inicial
     handleResize();
 
+    TagManager.initialize({ gtmId: 'GTM-WNHSGKN' });
+
+
     // Limpiar el event listener al desmontar el componente
     return () => {
       // Verificar si window está definido antes de quitar el event listener
@@ -37,13 +41,15 @@ const CarouselSwiper = () => {
   const amount = windowWidth < 768 ? "1" : "5";
 
 
-  function handleSwipeAction () {
-
-    
-    window.dataLayer.push({'event': "carousel.swipe", 'userId': 'User ?',});
-    console.log({'event': "carousel.swipe", 'userId': 'User ?',});
-    
-  }
+  const handleSwipeAction = () => {
+    // Registra el evento en GTM
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "carousel.swipe",
+        userId: 'User ?',
+      },
+    });
+  };
 
 
   return (    
@@ -52,9 +58,12 @@ const CarouselSwiper = () => {
         <h2>¿Para qué lo podés usar?</h2>
         <p>Usalo para lo que necesites</p>
         <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true}
-        onClick={handleSwipeAction}
-        >
-          
+
+                        onSwiper={(swiper) => {
+                          // Configura el manejador de eventos de swiper
+                          swiper.on('slideChange', handleSwipeAction);
+                        }}                                
+        >          
               <SwiperSlide>
                 <div className={styles.wrapImgSlider}>
                   <img src="/images/icoCarousel/ico-local.svg" alt="Uso: Remodelar el local" />

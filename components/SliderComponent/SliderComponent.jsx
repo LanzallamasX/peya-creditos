@@ -7,14 +7,15 @@ import "swiper/css/pagination";
 
 
 
-const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position}) => {
+const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position }) => {
+
+
 
   return (
     <Swiper
       slidesPerView={amount}
       direction={position}
       pagination={paginationBoolean}
-      
       modules={[Pagination, Autoplay]}
       spaceBetween={7}
       autoplay={{

@@ -57,6 +57,22 @@ h2 {
   font-family: TextaAltaMedium;
 }
 
+.titleColor{
+  color: #00F9D2 !important;
+}
+
+
+
+.bgColorText{
+  color: #1E49E2 !important;
+  background-color: #00F9D2;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+
+
 p {
   font-size: clamp(1.25rem, 1.25vw, 1.25rem); 
   font-family: TextaAltaMedium;
@@ -67,6 +83,8 @@ section {
  /* padding-inline: 15%;*/
   padding-block: 2em;
 }
+
+
 
 @media (max-width: 500px) {
   section {
