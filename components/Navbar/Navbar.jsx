@@ -42,7 +42,7 @@ const Navbar = ({ fn }) => {
           </li>
         </ul>
           <MainButton eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 0'} 
-            
+            text={'Simular crédito'}
             />
       </div>
 

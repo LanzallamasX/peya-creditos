@@ -3,7 +3,7 @@ import styles from "./MainButton.module.scss";
 import { isMobile } from "react-device-detect";
 
 const MainButton = ({
-  href = "https://pedidosya.portal.restaurant/finance-py/credits-redirect?contractId={{contrato}}&",
+  href = "",
   id,
   color = "buttonBlue",
   text = "Simular mi crédito",
@@ -13,7 +13,7 @@ const MainButton = ({
   bannerNumber
 }) => {
   
-  const handleClick = () => {
+  const handleClickButton = () => {
     
     window.dataLayer.push({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
     console.log({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
@@ -26,14 +26,16 @@ const MainButton = ({
   return (
 <>
 {href === "tableAction" ? (
-  <button id={id} className={`${styles.mainButton} ${styles[color]}`}>
+  <button id={id} className={`${styles.mainButton} ${styles[color]}`}
+          onClick={handleClickButton}
+  >
     {text}
   </button>
 ) : !isMobile && fn ? (
   <button
     id={id}
     className={`${styles.mainButton} ${styles[color]}`}
-    onClick={fn}
+    onClick={handleClickButton}
   >
     {text}
   </button>
@@ -42,6 +44,7 @@ const MainButton = ({
     href={href}
     id={id}
     className={`${styles.mainButton} ${styles[color]}`}
+    onClick={handleClickButton}
   >
     {text}
   </Link>
