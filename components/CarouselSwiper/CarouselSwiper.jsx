@@ -41,7 +41,11 @@ const CarouselSwiper = () => {
       <div>
         <h2>¿Para qué lo podés usar?</h2>
         <p>Usalo para lo que necesites</p>
-        <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true}>
+        <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true}
+          eventClick={"carousel.swipe"} userId={'User ?'} 
+        
+        >
+          
               <SwiperSlide>
                 <div className={styles.wrapImgSlider}>
                   <img src="/images/icoCarousel/ico-local.svg" alt="Uso: Remodelar el local" />
