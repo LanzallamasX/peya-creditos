@@ -21,7 +21,7 @@ const PaymentSteps = () => {
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: container2.current,
-        start: "top",
+        start: "top +=50",
         end: "bottom",
         pin: true,
         smooth: 5,
