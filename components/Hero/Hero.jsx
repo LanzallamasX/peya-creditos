@@ -61,8 +61,8 @@ const Hero = ({ imagesArray, fn, tyc }) => {
                 <div className={styles.heroSliderContainer}>
                   
                   <div className={styles.heroTopContainer}>
-                    <h1>{data.title}</h1>
-                    <h3>{data.subtitle}</h3>
+                    <h1 dangerouslySetInnerHTML={{ __html: data.title }}>{}</h1>
+                    <h3 dangerouslySetInnerHTML={{ __html: data.subtitle }}>{}</h3>
 
                     <MainButton  eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 1'} 
                       text={'Simular crédito'} />
@@ -84,3 +84,4 @@ const Hero = ({ imagesArray, fn, tyc }) => {
 };
 
 export default Hero;
+
