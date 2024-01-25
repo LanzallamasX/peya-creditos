@@ -15,11 +15,8 @@ const Faqs = ({}) => {
         Si ya estás vendiendo con tu local desde la aplicación PedidosYa, podrás acceder a un crédito cuando cumplas con los siguientes objetivos:<br/>
 
                       - <strong>Vender</strong> activamente <strong>durante más de 6 semanas</strong> consecutivas.<br/>
-                      -<strong> Mantener un promedio de ventas semanales mayor a MonedadeMercado MontoVariablePorMercado</strong>.<br/>
+                      -Alcanzar un buen <strong>desempeño comercial</strong> en PedidosYa.<br/>
                       - Tener la <strong>cuenta bancaria validada</strong>.<br/>
-                      - Alcanzar un <strong>buen desempeño comercial</strong> en PedidosYa.<br/>
-
-                      Podés revisar si cumplís con todos los objetivos en la solapa Créditos de la Sección Finanzas.<br/>
 
                       Si terminás de pagar tu crédito y seguís vendiendo activamente, podrás acceder a un nuevo crédito.
         `,
