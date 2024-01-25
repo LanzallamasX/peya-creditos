@@ -41,7 +41,7 @@ const Navbar = ({ fn }) => {
             <a href="#faqs">Ayuda</a>
           </li>
         </ul>
-          <MainButton eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'bannerNumber 0'} 
+          <MainButton eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'0'} 
             text={'Simular crédito'}
             />
       </div>
