@@ -112,7 +112,7 @@ const CreditRequest = () => {
                 text = "Simular crédito"
                 eventClick={"credit_selection.proceeded"}
                 userid={'User ?'}
-                bannerNumber={'bannerNumber 3'} 
+                bannerNumber={'3'} 
             />
 
         </div>
