@@ -65,7 +65,7 @@ const Faqs = ({}) => {
   ];
 
 
-  const handleFaqsClick = (event, faqUser, questionEvent, questionEvent, userId) => {
+  const handleFaqsClick = (event, faqUser, questionClicked, questionEvent) => {
     
     window.dataLayer.push({'event': event, 'questionClicked': questionClicked, 'questionEvent': questionEvent, 'userId': faqUser});
               console.log({'event': event, 'questionClicked': questionClicked, 'questionEvent': questionEvent, 'userId': faqUser});    
