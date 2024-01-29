@@ -21,7 +21,7 @@ const Faqs = ({}) => {
                       Si terminás de pagar tu crédito y seguís vendiendo activamente, podrás acceder a un nuevo crédito.
         `,
         event: 'credit_more_info.clicked',
-        faqUser: 'User ?',
+        faqUser: 'userid',
         questionClicked: 'Como puedo obtener una oferta de PedidosYa Creditos',
         questionEvent: 'isOnline',
 
@@ -33,7 +33,7 @@ const Faqs = ({}) => {
         `Podés solicitar un crédito de PedidosYa <strong> desde el lugar en el que te encuentres. Recibirás el dinero en tu cuenta bancaria en un máximo de 48 horas hábiles</strong> posteriores a la solicitud del crédito.<br />
         <strong> La solicitud es segura, online y fácil</strong>, conoce más detalles en los <a href="https://creditos.pedidosya.com/terminos-y-condiciones" title="Términos y condiciones de PedidosYA Créditos" target="_blank"><strong>Términos y condiciones</strong></a> de PedidosYa Créditos.`,
         event: 'credit_more_info.clicked',
-        faqUser: 'User ?',
+        faqUser: 'userid',
         questionClicked: 'Como es el credito que puedo solicitar',
         questionEvent: 'fixedInstallment',
 
@@ -44,7 +44,7 @@ const Faqs = ({}) => {
       content:
         `El dinero <strong> recibirás en la cuenta bancaria asociada a tu contrato con PedidosYa.</strong> La misma en la que recibes la liquidación por tus ventas semanales.`,
         event: 'credit_more_info.clicked',
-        faqUser: 'User ?',
+        faqUser: 'userid',
         questionClicked: 'Donde recibo el dinero',
         questionEvent: 'moneyPlacement',
 
@@ -57,7 +57,7 @@ const Faqs = ({}) => {
         Las cuotas<strong> serán consideradas como pagas cuando se realice el cobro total</strong>. Si en la liquidación semanal de ventas no se pudo realizar el cobro total de la cuota,<strong> se descontará de la siguiente liquidación hasta alcanzar el monto total a cobrar</strong>.<br />                          
         Y<strong> si quieres completar el pago de la cuota antes del cierre de la siguiente liquidación, podrás realizar una transferencia bancaria</strong> a la cuenta indicada en la solapa Créditos, dentro de la sección Finanzas en Partner Portal.`,
         event: 'credit_more_info.clicked',
-        faqUser: 'User ?',
+        faqUser: 'userid',
         questionClicked: 'Como y cuando pago las cuotas',
         questionEvent: 'howIsPaid',
 
