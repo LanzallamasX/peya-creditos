@@ -65,7 +65,7 @@ const Faqs = ({}) => {
   ];
 
 
-  const handleFaqsClick = (event, faqUser, questionClicked, questionEvent) => {
+  const handleFaqsClick = (event, questionClicked, questionEvent, faqUser) => {
     
     window.dataLayer.push({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});
               console.log({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});    
@@ -129,7 +129,7 @@ const Faqs = ({}) => {
             <AccordionItem 
               className={styles.button}
               onPress={() =>
-                handleFaqsClick(faq.event, faq.questionEvent, faq.faqUser)                
+                handleFaqsClick(faq.event, faq.questionClicked, faq.questionEvent, faq.faqUser)                
               }
               key={faq.key}
               aria-label={`Accordion ${faq.key}`}
