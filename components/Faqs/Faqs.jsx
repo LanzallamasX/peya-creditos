@@ -67,8 +67,8 @@ const Faqs = ({}) => {
 
   const handleFaqsClick = (event, faqUser, questionEvent, questionEvent, userId) => {
     
-    window.dataLayer.push({'event': event, 'questionClicked': questionClicked, 'userId': faqUser, 'questionEvent': questionEvent});
-              console.log({'event': event, 'questionClicked': questionClicked, 'userId': faqUser, 'questionEvent': questionEvent});    
+    window.dataLayer.push({'event': event, 'questionClicked': questionClicked, 'questionEvent': questionEvent, 'userId': faqUser});
+              console.log({'event': event, 'questionClicked': questionClicked, 'questionEvent': questionEvent, 'userId': faqUser});    
   }; 
 
   const itemClasses = {
