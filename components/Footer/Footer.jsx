@@ -8,7 +8,7 @@ const Footer = () => {
       <a href="#hero">
         <img className={styles.logo} src="/images/pedidosya.svg" alt="Logo PedidosYa Pagos" />
       </a>
-      <p className={styles.disclaimer}>Pedidos Ya © 2010 - 2022</p>
+      <p className={styles.disclaimer}>Pedidos Ya © 2010 - 2024</p>
 
       </div>
       <div className={styles.wrapTyC}>
