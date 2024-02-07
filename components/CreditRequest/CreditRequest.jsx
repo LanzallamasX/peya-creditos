@@ -107,13 +107,14 @@ const CreditRequest = () => {
                     </div>                    
             </div>
 
-            <MainButton
-                color="buttonRed"
-                text = "Simular crédito"
-                eventClick={"credit_selection.proceeded"}
-                userid={'User ?'}
-                bannerNumber={'bannerNumber 3'} 
+            <MainButton                  
+                  color="buttonRed"
+                  text={'Simular crédito'}
+                  eventClick={"credit_selection.proceeded"}
+                  userid={'User ?'}
+                  bannerNumber={'3'} 
             />
+        
 
         </div>
     </section>  

@@ -60,8 +60,7 @@ const Home = ({ heroDataFromDB, promoDataFromDB }) => {
     <Layout  >
       <main className={styles.mainContainer}>
         <Hero
-          imagesArray={heroDataFromDB}
-          
+          imagesArray={heroDataFromDB}          
           tyc={getTyCForModal}
         />
         <VideoStory />
