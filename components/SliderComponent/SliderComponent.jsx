@@ -1,22 +1,20 @@
 import { Swiper } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 
-
-
-
-const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position }) => {
-
-
+const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean, position, navigation }) => {
 
   return (
     <Swiper
       slidesPerView={amount}
       direction={position}
       pagination={paginationBoolean}
-      modules={[Pagination, Autoplay]}
+      
+      modules={[Pagination, Autoplay, Navigation]}
+      navigation = {navigation}
       spaceBetween={7}
       autoplay={{
         delay: 4000,
@@ -24,6 +22,9 @@ const SliderComponent = ({ children, id, amount, loopBoolean, paginationBoolean,
       }}
       loop={loopBoolean}
       id={id}
+
+      
+      
     >
       {children}
       

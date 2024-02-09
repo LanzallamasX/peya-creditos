@@ -50,15 +50,14 @@ const CarouselSwiper = () => {
       },
     });
   };
-
+  
 
   return (    
     <div id="usos" className={styles.usosContainer}>
       <div>
         <h2>¿Para qué lo podés usar?</h2>
         <p>Usalo para lo que necesites</p>
-        <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true}
-
+        <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true} navigation={true}
                         onSwiper={(swiper) => {
                           // Configura el manejador de eventos de swiper
                           swiper.on('slideChange', handleSwipeAction);
@@ -70,7 +69,7 @@ const CarouselSwiper = () => {
                   <span>Remodelar <br /> el local</span>
                 </div>            
               </SwiperSlide>   
-              <SwiperSlide>
+              <SwiperSlide >
                 <div className={styles.wrapImgSlider}>
                   <img src="/images/icoCarousel/ico-mercaderia.svg" alt="Uso: Comprar mercadería" />
                   <span>Comprar <br />mercadería</span>
