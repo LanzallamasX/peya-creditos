@@ -18,20 +18,20 @@ const Requirements = ({fn}) => {
             </div>
           
            <div className={styles.rightRequirements}> 
-              <h2 className={styles.titleDesk}>Estos son los requisitos para <b>acceder al crédito:</b></h2>
+              <h2 className={styles.titleDesk}>Estos son algunos de los requisitos para <b>acceder al crédito:</b></h2>
               <div className={styles.RequirementsList}>
                 <ItemBenefit
-                  text={"Vender activamente durante 2 meses consecutivos."}
+                  text={"Vender activamente durante más de 6 semanas consecutivos."}
                   img={"/icons/benefits/bullet.svg"}
                   imgAlt={"Icono sin burocracia"}
                 />
                 <ItemBenefit
-                  text={"Mantener un promedio de ventas estable."}
+                  text={"Alcanzar un buen desempeño comercial en PedidosYa."}
                   img={"/icons/benefits/bullet.svg"}
                   imgAlt={"Icono internacional"}
                 />
                 <ItemBenefit
-                  text={"Tener la cuenta bancaria validada."}
+                  text={"Tener cuenta bancaria validada."}
                   img={"/icons/benefits/bullet.svg"}
                   imgAlt={"Icono descuentos"}
                 />       

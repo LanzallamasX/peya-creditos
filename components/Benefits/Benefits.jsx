@@ -82,7 +82,7 @@ const Benefits = ({fn}) => {
                   text={'Simular crédito'}
                   eventClick={"credit_selection.proceeded"}
                   userid={'User ?'}
-                  bannerNumber={'bannerNumber 2'} 
+                  bannerNumber={'2'} 
                 />        
               </div>
             </div>
