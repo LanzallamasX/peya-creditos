@@ -3,7 +3,7 @@ import MainButton from "../MainButton/MainButton";
 import styles from "./Benefits.module.scss";
 import { motion } from "framer-motion";
 
-const Benefits = ({fn}) => {
+const Benefits = ({ lng }) => {
   return (
     <section id="benefitsSection" className={styles.benefitsContainer}>
       <div className="container flex flex-col md:flex-row gap-8">
@@ -57,17 +57,17 @@ const Benefits = ({fn}) => {
             <h2>El mejor crédito, porque <b>tu negocio</b> se lo merece</h2>
             <div className={styles.benefitsList}>
               <ItemBenefit
-                text={"Pedilo online, sin papeles."}
+                text={`${lng === 'AR' ? 'Pedilo' : 'Pídelo'} online, sin papeles.`}
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono sin burocracia"}
               />
               <ItemBenefit
-                text={"Elegí monto y cuotas."}
+                text={ `${lng === 'AR' ? 'Elegí' : 'Elige'} monto y cuotas.` }
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono internacional"}
               />
               <ItemBenefit
-                text={"Recibilo en menos de 48hs hábiles."}
+                text={ `${lng === 'AR' ? 'Recibilo' : 'Recibelo'} en menos de 48hs hábiles.` }
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono descuentos"}
               />

@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PaymentSteps = () => {
+const PaymentSteps = ({ lng }) => {
   const container2 = useRef();
   const wrapcontainer = container2.current;
 
@@ -57,7 +57,7 @@ const PaymentSteps = () => {
     <section id="paymentSteps" ref={container2} className={styles.paymentStepsContainer}>
 
       <div className="container flex flex-col" >
-              <h2>Pagá las cuotas <b>con tus ventas</b></h2>
+              <h2>{lng === 'AR' ? 'Pagá' : 'Paga'} las cuotas <b>con tus ventas</b></h2>
               <div className={styles.wrapCardsPaymentSteps}>
                    <div className={styles.cardWrap} data-element={"elem2"}>
                       <CardPaymentSteps 
