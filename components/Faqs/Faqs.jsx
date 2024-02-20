@@ -2,9 +2,11 @@ import React from "react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import styles from "./Faqs.module.scss";
 
-
+import AccordionComponent from "../AccordionComponent/AccordionComponent";
 
 const Faqs = ({}) => {
+
+  
 
   const faqData = [
     {
@@ -68,7 +70,7 @@ const Faqs = ({}) => {
   const handleFaqsClick = (event, questionClicked, questionEvent, faqUser) => {
     
     window.dataLayer.push({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});
-              console.log({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});    
+          //    console.log({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});    
   }; 
 
   const itemClasses = {
@@ -77,7 +79,10 @@ const Faqs = ({}) => {
     trigger: "px-2 py-0 data-[hover=true]:bg-default-100 rounded-lg h-14 flex items-center",
     indicator: "text-bold",
     content: "text-small px-2",
+    indicator: "a",
   };
+
+  
 
 
   return (
@@ -85,63 +90,19 @@ const Faqs = ({}) => {
       <div className="container w-[95vw] sm:w-[100vw] md:w-[50vw] lg:w-[68vw] xl:w-[68vw]">
       <h2>Preguntas frecuentes</h2>
 
-        <Accordion className={styles.wrapFaqs}                        
-                      motionProps={{
-                        variants: {
-                          enter: {
-                            y: 0,
-                            opacity: 1,
-                            height: "auto",
-                            transition: {
-                              height: {
-                                type: "spring",
-                                stiffness: 500,
-                                damping: 30,
-                                duration: 1,
-                              },
-                              opacity: {
-                                easings: "ease",
-                                duration: 1,
-                              },
-                            },
-                          },
-                          exit: {
-                            y: -10,
-                            opacity: 0,
-                            height: 0,
-                            transition: {
-                              height: {
-                                easings: "ease",
-                                duration: 0.25,
-                              },
-                              opacity: {
-                                easings: "ease",
-                                duration: 0.3,
-                              },
-                            },
-                          },
-                        },
-                      }}
-          >
 
+      <div style={styles}>
+      
+      {faqData.map((faq) => (
+            <AccordionComponent num={faq.key} title={faq.question} content={faq.content}
+            onPress={() =>
+              handleFaqsClick(faq.event, faq.questionClicked, faq.questionEvent, faq.faqUser)                
+            }
+             />
+          ))} 
+      
+    </div>
 
-          {faqData.map((faq) => (
-            <AccordionItem 
-              className={styles.button}
-              onPress={() =>
-                handleFaqsClick(faq.event, faq.questionClicked, faq.questionEvent, faq.faqUser)                
-              }
-              key={faq.key}
-              aria-label={`Accordion ${faq.key}`}
-              title={<div><span className={styles.colorList}>{faq.key}</span> {faq.question}</div>}
-            >
-              <div>
-              <p dangerouslySetInnerHTML={{ __html: faq.content }} />
-              </div>
-            </AccordionItem>
-          ))}                  
-
-        </Accordion>
         </div>
     </section>
   );
