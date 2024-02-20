@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CreditRequest = () => {
+const CreditRequest = ({ lng }) => {
   const container = useRef();
   const wrapcontainer = container.current;
 
@@ -53,8 +53,8 @@ const CreditRequest = () => {
   return (    
     <section id="creditRequest" ref={container} className={styles.creditRequestContainer}>
       <div className="container flex flex-col gap-8 items-center">
-            <h2>Solicitá tu Crédito en <b>3 pasos</b></h2>
-            <p>Como ya te conocemos, no necesitás pasar por el proceso burocrático bancario tradicional.</p>
+            <h2>{`${lng === 'AR' ? 'Solicitá' : 'Solicita'}`} tu Crédito en <b>3 pasos</b></h2>
+            <p>{`Como ya te conocemos, no ${lng === 'AR' ? 'necesitás' : 'necesitas'} pasar por el proceso burocrático bancario tradicional.`}</p>
 
             <div className={styles.cards}>   
                     <div className={styles.cardWrap} data-element={"elem1"}>   
@@ -62,8 +62,8 @@ const CreditRequest = () => {
                           number={"1"}
                           imgDesk={"images/steps/Paso-1_dk.jpg"}
                           imgMob={"images/steps/paso1.png"}
-                          title={"Simulá tu crédito"}
-                          text={"Elegí el monto a solicitar, en cuantas cuotas lo querés abonar y conocé el monto final."}
+                          title={`${lng === 'AR' ? 'Simulá' : 'Simula'} tu crédito`}
+                          text={`${lng === 'AR' ? 'Elegí' : 'Elige'} el monto a solicitar, en cuantas cuotas lo ${lng === 'AR' ? 'querés' : 'quieres'} abonar y ${lng === 'AR' ? 'conocé' : 'conoce'} el monto final.`}
                           color={"cardBlue"}
                           lineColor={"lineWhite"}
                     />
@@ -73,8 +73,8 @@ const CreditRequest = () => {
                                   number={"2"}
                                   imgDesk={"images/steps/Paso-2_dk.jpg"}
                                   imgMob={"images/steps/paso2.png"}
-                                  title={"Confirmá tus datos"}
-                                  text={"Para completar la solicitud y recibir información debés confirmar e-mail y un teléfono de contacto."}
+                                  title={`${lng === 'AR' ? 'Confirmá' : 'Confirma'} tus datos`}
+                                  text={`Para completar la solicitud y recibir información ${lng === 'AR' ? 'debés' : 'debes'} confirmar e-mail y un teléfono de contacto.`}
                                   color={"cardGreen"}
                                   lineColor={"lineBlue"}
                             />   
@@ -85,7 +85,7 @@ const CreditRequest = () => {
                                   number={"3"}
                                   imgDesk={"images/steps/Paso-3_dk.jpg"}
                                   imgMob={"images/steps/paso3.png"}
-                                  title={"Aceptá T&C"}
+                                  title={`${lng === 'AR' ? 'Aceptá' : 'Acepta'} T&C`}
                                   text={"Check de la declaración jurada y términos & condiciones."}
                                   color={"cardBlue"}
                                   lineColor={"lineWhite"}

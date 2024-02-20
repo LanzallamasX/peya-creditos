@@ -1,5 +1,4 @@
 import React from "react";
-import {Accordion, AccordionItem} from "@nextui-org/react";
 import styles from "./Faqs.module.scss";
 
 import AccordionComponent from "../AccordionComponent/AccordionComponent";

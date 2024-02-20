@@ -1,130 +1,104 @@
-import Layout from "../components/Layout/Layout";
-import styles from "./index.module.scss";
-import VideoStory from "../components/VideoStory/VideoStory";
-import Benefits from "../components/Benefits/Benefits";
-import CarouselSwiper from "../components/CarouselSwiper/CarouselSwiper";
-import Requirements from "../components/Requirements/Requirements";
-import CreditRequest from "../components/CreditRequest/CreditRequest";
-import PaymentSteps from "../components/PaymentSteps/PaymentSteps";
-import Testimonials from "../components/Testimonials/Testimonials";
-import Faqs from "../components/Faqs/Faqs";
-import Hero from "../components/Hero/Hero";
-import {
-  collection,
-  getDocs,
-  getFirestore,
-  orderBy,
-  query,
-} from "firebase/firestore";
-import { useEffect, useState } from "react";
-import PopUp from "../components/PopUp/PopUp";
-import { AnimatePresence } from "framer-motion";
-import PopUpTyC from "../components/PopUpTyC/PopUpTyC";
+import Link from "next/link";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+export const metadata = {
+  title: "Experiencias PedidosYa",
+  description: "Experiencias PedidosYa",
+  icons: {
+    icon: "/favicon.png",
+  },
+  keywords:
+    "Pagos, PedidosYa Pagos, PedidosYa, Visa, Visa Crédito, Crédito, pedidosya, pedidos, rápido, compra, tarjeta, visa, crédito, débito, beneficios, compras, descuentos, gana, premio, concurso, chances, supermercados, restaurantes, mercados, farmacias, tiendas, helados, mascotas, despegar, viajes, viajar, viaje, tour, new york, nueva york, manhattan, hamburguesa, burga, burger",
+};
 
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.refresh();
-
-
-const Home = ({ heroDataFromDB, promoDataFromDB }) => {
-  const [showPopUp, setShowPopUp] = useState(false);
-  const [showTyCPopUp, setShowTyCPopUp] = useState(false);
-  const [termsAndConditionsForModal, setTermsAndConditionsForModal] =
-    useState("");
-
-  const openModal = () => {
-    setShowPopUp((current) => !current);
-  };
-
-  const openTyCModal = () => {
-    setShowTyCPopUp((current) => !current);
-  };
-
-  const getTyCForModal = (data) => {
-    // console.log(data);
-    setTermsAndConditionsForModal(data);
-    openTyCModal();
-  };
-
-  useEffect(() => {
-    !localStorage.getItem("userData") &
-      localStorage.setItem("userData", "null");
-    let height = document.getElementById("nav").offsetHeight;
-    console.log(height);
-    document.documentElement.style.setProperty("--top-navbar", height + "px");
-  }, []);
-
+export default function Home() {
   return (
-    <Layout  >
-      <main className={styles.mainContainer}>
-        <Hero
-          imagesArray={heroDataFromDB}          
-          tyc={getTyCForModal}
+    <section className="min-h-screen grid grid-rows-main-page font-texta">
+      <div className="flex justify-center items-center gap-4 p-4 h-min bg-peya-blue text-black">
+        <img
+          src="/images/hero/pedidosYaLogo.svg"
+          className="w-20 lg:w-48 lg:hidden"
+          alt=""
         />
-        <VideoStory />
-        <Benefits />
-        <CarouselSwiper />
-        <Requirements />
-        <CreditRequest />  
-        <PaymentSteps />
-        <Testimonials />      
-        <Faqs />
+        <img
+          src="/images/hero/pedidosYaLogo.svg"
+          className="w-14 lg:w-48 hidden lg:block"
+          alt=""
+        />
+        
+      </div>
+      <div className="px-peya-x py-8">
+        <div className="flex flex-col lg:flex-row justify-evenly px-peya-x py-8 text-4xl items-center flex-wrap text-black font-texta-bold bg-peya-white h-full lg:gap-12">          
+          <Link
+            href={"/ar/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-ar h-6 rounded-peya"></span>
+            Argentina
+          </Link>
+          <Link
+            href={"/bo/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-bo h-6 rounded-peya"></span>
+            Bolivia
+          </Link>
+          <Link
+            href={"/cl/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-cl h-6 rounded-peya"></span>
+            Chile
+          </Link>
+          <Link
+            href={"/pe/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-pe h-6 rounded-peya"></span>
+            Perú
+          </Link>
+          <Link
+            href={"/ec/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-ec h-6 rounded-peya"></span>
+            Ecuador
+          </Link>  
+          <Link
+            href={"/sv/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-sv h-6 rounded-peya"></span>
+            El Salvador
+          </Link>       
+          <Link
+            href={"/pa/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-pa h-6 rounded-peya"></span>
+            Panamá
+          </Link>   
+          <Link
+            href={"/uy/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-uy h-6 rounded-peya"></span>
+            Uruguay
+          </Link> 
+          <Link
+            href={"/py/"}
+            className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+          >
+            <span className="fi fi-py h-6 rounded-peya"></span>
+            Paraguay
+          </Link>                                    
+        </div>
+      </div>
+      <div className="flex justify-center items-center w-full px-4 lg:px-peya-x h-fit bg-peya-blue py-8">
 
-      </main>
-      <AnimatePresence>
-        {showPopUp ? <PopUp  /> : null}
-      </AnimatePresence>
-      <AnimatePresence>
-        {showTyCPopUp ? (
-          <PopUpTyC fn={openTyCModal} data={termsAndConditionsForModal} />
-        ) : null}
-      </AnimatePresence>
-    </Layout>
+        
+      </div>
+      
+    </section>
   );
-};
-
-export const getStaticProps = async () => {
-  try {
-    const db = getFirestore();
-
-    const queryCollectionHero = await query(
-      collection(db, "hero"),
-      orderBy("sort")
-    );
-
-    const heroDataFromDB = [];
-
-    await getDocs(queryCollectionHero).then((res) =>
-      res.docs.map((item) =>
-        heroDataFromDB.push({ ...item.data(), id: item.id })
-      )
-    );
-
-    const queryCollectionPromos = await query(
-      collection(db, "promos"),
-      orderBy("sort")
-    );
-
-    const promoDataFromDB = [];
-
-    await getDocs(queryCollectionPromos).then((res) =>
-      res.docs.map((item) =>
-        promoDataFromDB.push({ ...item.data(), id: item.id })
-      )
-    );
-
-    return {
-      props: {
-        heroDataFromDB,
-        promoDataFromDB,
-      },
-      revalidate: 60,
-    };
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-export default Home;
+}

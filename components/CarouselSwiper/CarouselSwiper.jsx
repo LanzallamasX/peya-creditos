@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import TagManager from 'react-gtm-module';
 
-const CarouselSwiper = () => {
+const CarouselSwiper = ({ lng }) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -55,8 +55,8 @@ const CarouselSwiper = () => {
   return (    
     <div id="usos" className={styles.usosContainer}>
       <div>
-        <h2>¿Para qué lo podés usar?</h2>
-        <p>Usalo para lo que necesites</p>
+        <h2>{`¿Para qué lo ${lng === 'AR' ? 'podés' : 'puedes'} usar?`}</h2>
+        <p>{`${lng === 'AR' ? 'Usalo' : 'Úsalo'} para lo que necesites`}</p>
         <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true} navigation={true}
                         onSwiper={(swiper) => {
                           // Configura el manejador de eventos de swiper
