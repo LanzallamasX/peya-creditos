@@ -7,7 +7,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useInView } from 'react-intersection-observer';
 
-const Testimonials = ({fn}) => {
+const Testimonials = ({ testimonies }) => {
   const [screenInView, inView] = useInView({
     triggerOnce: true,
   });
@@ -45,14 +45,28 @@ const Testimonials = ({fn}) => {
 
                   <div ref={screenInView} className={styles.wrapSlider}>
                     {
-                    <SliderComponent amount={1} paginationBoolean={false} loopBoolean={false}>
-                        <SwiperSlide>
-                          <div className={styles.wrapImgSlider}>
-                            <span className={styles.textInit}>testimonio</span>
-                            <img src="/images/test-logo-cata.png" alt="Uso: Remodelar el local" />
-                            <span className={styles.textEnd}><i>“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”</i></span>
-                          </div>            
-                        </SwiperSlide>     
+                    <SliderComponent
+                      paginationBoolean={true}
+                      loopBoolean={false}
+                      navigation={false}
+                      autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                      }}
+                    >
+                      {
+                        testimonies.map(testimony => {
+                          return (
+                            <SwiperSlide>
+                              <div className={styles.wrapImgSlider}>
+                                <span className={styles.textInit}>testimonio</span>
+                                <img src={testimony.img} alt="Logo Testimonial" />
+                                <span className={styles.textEnd}><i>{testimony.text}</i></span>
+                              </div>            
+                            </SwiperSlide>
+                          )
+                        })
+                      }     
                     </SliderComponent>  
 
                     }    

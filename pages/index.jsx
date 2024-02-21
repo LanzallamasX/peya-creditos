@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./index.module.scss";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 export const metadata = {
@@ -34,35 +35,35 @@ export default function Home() {
             className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
             <span className="fi fi-ar h-6 rounded-peya"></span>
-            Argentina
+            <div className={styles.fontSite}>Argentina</div>
           </Link>
           <Link
             href={"/cl/"}
             className="visible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
             <span className="fi fi-cl h-6 rounded-peya"></span>
-            Chile
+            <div className={styles.fontSite}>Chile</div>
           </Link>
           <Link
             href={"/pe/"}
             className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
             <span className="fi fi-pe h-6 rounded-peya"></span>
-            Perú
+            <div className={styles.fontSite}>Perú</div>
           </Link>
           <Link
             href={"/ec/"}
             className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
             <span className="fi fi-ec h-6 rounded-peya"></span>
-            Ecuador
+            <div className={styles.fontSite}>Ecuador</div>
           </Link>  
           <Link
             href={"/rd/"}
             className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
             <span className="fi fi-do h-6 rounded-peya"></span>
-            República Dominicana
+            <div className={styles.fontSite}>República Dominicana</div>
           </Link>
         </div>
       </div>

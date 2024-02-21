@@ -73,7 +73,12 @@ const Rd = ({ heroDataFromDB, promoDataFromDB }) => {
         <Requirements />
         <CreditRequest lng={lng} /> 
         <PaymentSteps lng={lng} />
-        <Testimonials />      
+        <Testimonials
+          testimonies={[{
+            img: '/images/test-logo-cata.png',
+            text: '“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”'
+          }]}
+        />      
         <Faqs />
 
       </main>

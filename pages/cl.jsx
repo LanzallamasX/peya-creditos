@@ -73,7 +73,18 @@ const Cl = ({ heroDataFromDB, promoDataFromDB }) => {
         <Requirements />
         <CreditRequest lng={lng} /> 
         <PaymentSteps lng={lng} />
-        <Testimonials />      
+        <Testimonials
+          testimonies={[
+            {
+              img: '/images/test-logo-meraki.png',
+              text: '“Los créditos son de gran ayuda! He tenido dos créditos con ustedes y he pagado todo al día completamente”'
+            },
+            {
+              img: '/images/test-logo-suika.png',
+              text: '“Estamos haciendo mejoras en nuestro local y ese dinero nos cae muy bien. La verdad es que se descuenta muy rápido y es muy cómodo para nosotros!”'
+            },
+          ]}
+        />    
         <Faqs />
 
       </main>
