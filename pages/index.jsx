@@ -37,15 +37,8 @@ export default function Home() {
             Argentina
           </Link>
           <Link
-            href={"/bo/"}
-            className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
-          >
-            <span className="fi fi-bo h-6 rounded-peya"></span>
-            Bolivia
-          </Link>
-          <Link
             href={"/cl/"}
-            className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
+            className="visible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
             <span className="fi fi-cl h-6 rounded-peya"></span>
             Chile
@@ -65,33 +58,12 @@ export default function Home() {
             Ecuador
           </Link>  
           <Link
-            href={"/sv/"}
+            href={"/rd/"}
             className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
-            <span className="fi fi-sv h-6 rounded-peya"></span>
-            El Salvador
-          </Link>       
-          <Link
-            href={"/pa/"}
-            className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
-          >
-            <span className="fi fi-pa h-6 rounded-peya"></span>
-            Panamá
-          </Link>   
-          <Link
-            href={"/uy/"}
-            className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
-          >
-            <span className="fi fi-uy h-6 rounded-peya"></span>
-            Uruguay
-          </Link> 
-          <Link
-            href={"/py/"}
-            className="invisible w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
-          >
-            <span className="fi fi-py h-6 rounded-peya"></span>
-            Paraguay
-          </Link>                                    
+            <span className="fi fi-do h-6 rounded-peya"></span>
+            República Dominicana
+          </Link>
         </div>
       </div>
       <div className="flex justify-center items-center w-full px-4 lg:px-peya-x h-fit bg-peya-blue py-8">

@@ -60,8 +60,8 @@ const CreditRequest = ({ lng }) => {
                     <div className={styles.cardWrap} data-element={"elem1"}>   
                     <CardCreditRequest 
                           number={"1"}
-                          imgDesk={"images/steps/Paso-1_dk.jpg"}
-                          imgMob={"images/steps/paso1.png"}
+                          imgDesk={`images/steps/Paso-1_dk${lng === 'AR' ? '' : '-neutro'}.jpg`}
+                          imgMob={`images/steps/paso1${lng === 'AR' ? '' : '-neutro'}.png`}
                           title={`${lng === 'AR' ? 'Simulá' : 'Simula'} tu crédito`}
                           text={`${lng === 'AR' ? 'Elegí' : 'Elige'} el monto a solicitar, en cuantas cuotas lo ${lng === 'AR' ? 'querés' : 'quieres'} abonar y ${lng === 'AR' ? 'conocé' : 'conoce'} el monto final.`}
                           color={"cardBlue"}
@@ -71,8 +71,8 @@ const CreditRequest = ({ lng }) => {
                     <div className={styles.cardWrap} data-element={"elem1"}>   
                       <CardCreditRequest
                                   number={"2"}
-                                  imgDesk={"images/steps/Paso-2_dk.jpg"}
-                                  imgMob={"images/steps/paso2.png"}
+                                  imgDesk={`images/steps/Paso-2_dk${lng === 'AR' ? '' : '-neutro'}.jpg`}
+                                  imgMob={`images/steps/paso2${lng === 'AR' ? '' : '-neutro'}.png`}
                                   title={`${lng === 'AR' ? 'Confirmá' : 'Confirma'} tus datos`}
                                   text={`Para completar la solicitud y recibir información ${lng === 'AR' ? 'debés' : 'debes'} confirmar e-mail y un teléfono de contacto.`}
                                   color={"cardGreen"}
@@ -83,8 +83,8 @@ const CreditRequest = ({ lng }) => {
                     <div className={styles.cardWrap} data-element={"elem1"}>   
                       <CardCreditRequest
                                   number={"3"}
-                                  imgDesk={"images/steps/Paso-3_dk.jpg"}
-                                  imgMob={"images/steps/paso3.png"}
+                                  imgDesk={`images/steps/Paso-3_dk${lng === 'AR' ? '' : '-neutro'}.jpg`}
+                                  imgMob={`images/steps/paso3${lng === 'AR' ? '' : '-neutro'}.png`}
                                   title={`${lng === 'AR' ? 'Aceptá' : 'Acepta'} T&C`}
                                   text={"Check de la declaración jurada y términos & condiciones."}
                                   color={"cardBlue"}

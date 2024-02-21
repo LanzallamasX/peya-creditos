@@ -27,8 +27,8 @@ import PopUpTyC from "../components/PopUpTyC/PopUpTyC";
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.refresh();
 
-const Uy = ({ heroDataFromDB, promoDataFromDB }) => {
-  const lng = 'UY';
+const Rd = ({ heroDataFromDB, promoDataFromDB }) => {
+  const lng = 'RD';
   const [showPopUp, setShowPopUp] = useState(false);
   const [showTyCPopUp, setShowTyCPopUp] = useState(false);
   const [termsAndConditionsForModal, setTermsAndConditionsForModal] =
@@ -131,4 +131,4 @@ export const getStaticProps = async () => {
   }
 };
 
-export default Uy;
+export default Rd;
