@@ -20,6 +20,7 @@ import CreditRequest from "../components/CreditRequest/CreditRequest";
 import PaymentSteps from "../components/PaymentSteps/PaymentSteps";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Faqs from "../components/Faqs/Faqs";
+import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import PopUp from "../components/PopUp/PopUp";
 import PopUpTyC from "../components/PopUpTyC/PopUpTyC";
@@ -59,6 +60,7 @@ const Cl = ({ heroDataFromDB, promoDataFromDB }) => {
     <Layout  >
       <main className={styles.mainContainer}>
         <Hero
+          lng={lng}
           imagesArray={heroDataFromDB}          
           tyc={getTyCForModal}
         />
@@ -85,7 +87,9 @@ const Cl = ({ heroDataFromDB, promoDataFromDB }) => {
             },
           ]}
         />    
-        <Faqs />
+        <Faqs
+          tyc="https://creditos.pedidosya.com/cl/terminos-y-condiciones"
+        />
 
       </main>
       <AnimatePresence>
@@ -96,6 +100,7 @@ const Cl = ({ heroDataFromDB, promoDataFromDB }) => {
           <PopUpTyC fn={openTyCModal} data={termsAndConditionsForModal} />
         ) : null}
       </AnimatePresence>
+      <Footer tyc="https://creditos.pedidosya.com/cl/terminos-y-condiciones" />
     </Layout>
   );
 };

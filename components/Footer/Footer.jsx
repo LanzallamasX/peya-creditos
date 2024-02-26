@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer = ({ tyc }) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapLogo}>
@@ -14,7 +14,7 @@ const Footer = () => {
       <div className={styles.wrapTyC}>
         <ul className={styles.inlineList}>
           <li>
-            <a target="_blank" href="https://creditos.pedidosya.com/terminos-y-condiciones">
+            <a target="_blank" href={tyc}>
               Términos y condiciones
             </a>
           </li>

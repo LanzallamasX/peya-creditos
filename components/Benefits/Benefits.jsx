@@ -67,7 +67,7 @@ const Benefits = ({ lng }) => {
                 imgAlt={"Icono internacional"}
               />
               <ItemBenefit
-                text={ `${lng === 'AR' ? 'Recibilo' : 'Recibelo'} en menos de 48hs hábiles.` }
+                text={ `${lng === 'AR' ? 'Recibilo' : 'Recíbelo'} en menos de 48hs hábiles.` }
                 img={"/icons/benefits/bullet.svg"}
                 imgAlt={"Icono descuentos"}
               />

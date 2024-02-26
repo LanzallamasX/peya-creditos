@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 
 import dynamic from "next/dynamic";
 const DynamicGoToTop = dynamic(() => import("../GoToTop/GoToTop"), {
@@ -24,7 +23,6 @@ const Layout = ({
       <Header fn={fn} />
       {children}
       <DynamicGoToTop />
-      <Footer />
     </>
   );
 };

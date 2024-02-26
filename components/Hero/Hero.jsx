@@ -6,7 +6,7 @@ import "swiper/css";
 import styles from "./Hero.module.scss";
 import { useEffect, useState } from "react";
 
-const Hero = ({ imagesArray, fn, tyc }) => {
+const Hero = ({ imagesArray, lng, fn, tyc }) => {
   const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
           </SwiperSlide>
         ) : windowWidth > 500 ? (
           imagesArray
-            .filter((item) => item.device !== "mobile")
+            .filter((item) => item.country === lng && item.device !== "mobile")
             .map((data) => (
               <SwiperSlide key={data.id}>
                 <div className={styles.bgSliderContainer} style={{ backgroundImage: `url(${data.url})` }}></div>
@@ -53,7 +53,7 @@ const Hero = ({ imagesArray, fn, tyc }) => {
             ))
         ) : (
           imagesArray
-            .filter((item) => item.device === "mobile")
+            .filter((item) => item.country === lng && item.device === "mobile")
             .map((data) => (
               <SwiperSlide key={data.id}>
                 <div className={styles.bgSliderContainer} style={{ backgroundImage: `url(${data.url})` }}></div>

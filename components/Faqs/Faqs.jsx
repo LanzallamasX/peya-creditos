@@ -3,8 +3,8 @@ import styles from "./Faqs.module.scss";
 
 import AccordionComponent from "../AccordionComponent/AccordionComponent";
 
-const Faqs = ({}) => {
-
+const Faqs = ({ tyc }) => {
+  
   
 
   const faqData = [
@@ -32,7 +32,7 @@ const Faqs = ({}) => {
       question: "¿Cómo es el crédito que puedo solicitar?",
       content:
         `Podés solicitar un crédito de PedidosYa <strong> desde el lugar en el que te encuentres. Recibirás el dinero en tu cuenta bancaria en un máximo de 48 horas hábiles</strong> posteriores a la solicitud del crédito.<br />
-        <strong> La solicitud es segura, online y fácil</strong>, conoce más detalles en los <a href="https://creditos.pedidosya.com/terminos-y-condiciones" title="Términos y condiciones de PedidosYA Créditos" target="_blank"><strong>Términos y condiciones</strong></a> de PedidosYa Créditos.`,
+        <strong> La solicitud es segura, online y fácil</strong>, conoce más detalles en los <a href="${tyc}" title="Términos y condiciones de PedidosYA Créditos" target="_blank"><strong>Términos y condiciones</strong></a> de PedidosYa Créditos.`,
         event: 'credit_more_info.clicked',
         faqUser: 'userid',
         questionClicked: 'Como es el credito que puedo solicitar',

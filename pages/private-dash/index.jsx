@@ -445,6 +445,16 @@ const index = () => {
                       }>
                     <div className={styles.inputGroup}>
                       <div className={styles.inputGroupWithLabel}>
+                        <label htmlFor="heroCountry">*DISPOSITIVO: </label>
+                        <select name="heroCountry" id="heroCountry" required>
+                          <option value="AR">ARGENTINA</option>
+                          <option value="CL">CHILE</option>
+                          <option value="EC">ECUADOR</option>
+                          <option value="PE">PERÚ</option>
+                          <option value="RD">REPÚBLICA DOMINICANA</option>
+                        </select>
+                      </div>
+                      <div className={styles.inputGroupWithLabel}>
                         <label htmlFor="heroDevice">*DISPOSITIVO: </label>
                         <select name="heroDevice" id="heroDevice" required>
                           <option value="desktop">DESKTOP</option>
@@ -533,7 +543,7 @@ const index = () => {
                         />
                       </div>
                       <div className={styles.inputGroupWithLabel}>
-                        <label htmlFor="heroImgTop">IMAGEN EXTRA: </label>
+                        <label htmlFor="heroImgTop">IMAGEN EXTRA:</label>
                         <input
                           type="file"
                           name="heroImgTop"
@@ -687,6 +697,17 @@ const index = () => {
                     }
                   >
                     <div className={styles.inputGroup}>
+                      <div className={styles.inputGroupWithLabel}>
+                        <label htmlFor="promosCountry">*DISPOSITIVO: </label>
+                        <select name="promosCountry" id="promosCountry" required>
+                          <option value="AR">ARGENTINA</option>
+                          <option value="CL">CHILE</option>
+                          <option value="EC">ECUADOR</option>
+                          <option value="PE">PERÚ</option>
+                          <option value="RD">REPÚBLICA DOMINICANA</option>
+                        </select>
+                      </div>
+
                       <div className={styles.inputGroupWithLabel}>
                         <label htmlFor="promosMobile">¿ES MOBILE? </label>
                         <input

@@ -21,7 +21,7 @@ const Requirements = ({fn}) => {
               <h2 className={styles.titleDesk}>Estos son algunos de los requisitos para <b>acceder al crédito:</b></h2>
               <div className={styles.RequirementsList}>
                 <ItemBenefit
-                  text={"Vender activamente durante más de 6 semanas consecutivos."}
+                  text={"Vender activamente durante más de 6 semanas consecutivas."}
                   img={"/icons/benefits/bullet.svg"}
                   imgAlt={"Icono sin burocracia"}
                 />
