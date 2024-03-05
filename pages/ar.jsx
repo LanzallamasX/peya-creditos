@@ -77,10 +77,10 @@ const Ar = ({ heroDataFromDB, promoDataFromDB }) => {
         <PaymentSteps lng={lng} />
         <Testimonials
           testimonies={[
-            /*{
+            {
               img: '/images/test-logo-cata.png',
               text: '“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”'
-            },*/
+            },
             {
               img: '/images/test-logo-donaMatsu.png',
               text: '“Sí volvería a sacar un crédito con PedidosYa. Es fácil y rápido me brinda más flexibilidad en el día a día”'
