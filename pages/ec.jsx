@@ -66,9 +66,9 @@ const Ec = ({ heroDataFromDB, promoDataFromDB }) => {
         />
         <VideoStory
           lng={lng}
-          name={'Juan'}
-          place={'Cata, tienda de calzone'}
-          video={'https://www.youtube.com/embed/K_Ig2THVe3U'}
+          name={'Julio'}
+          place={'Rukito Grill'}
+          video={'https://www.youtube.com/embed/nLCSF2NuutA'}
         />
         <Benefits lng={lng} />
         <CarouselSwiper lng={lng} />
@@ -76,13 +76,19 @@ const Ec = ({ heroDataFromDB, promoDataFromDB }) => {
         <CreditRequest lng={lng} /> 
         <PaymentSteps lng={lng} />
         <Testimonials
-          testimonies={[{
-            img: '/images/test-logo-cata.png',
-            text: '“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”'
-          }]}
+          testimonies={[
+            {
+              img: '/images/test-logo-freshNaturals.png',
+              text: '“Volvería a pedirlo porque es rápido y eficaz sirve de mucha ayuda ya que lo podría usar para compra de mercadería o para remodelar mi local”'
+            },
+            {
+              img: '/images/test-logo-saiko.png',
+              text: '“Es muy útil para abastecer de materia prima y poder ofrecer más promociones así incrementar mi ticket promedio diario, ofrecer mejores promociones cada vez”'
+            }
+          ]}
         />      
         <Faqs
-          tyc="https://creditos.pedidosya.com/terminos-y-condiciones"
+          tyc="https://creditos.pedidosya.com/ec/terminos-y-condiciones"
         />
 
       </main>
@@ -94,7 +100,7 @@ const Ec = ({ heroDataFromDB, promoDataFromDB }) => {
           <PopUpTyC fn={openTyCModal} data={termsAndConditionsForModal} />
         ) : null}
       </AnimatePresence>
-      <Footer tyc="https://creditos.pedidosya.com/terminos-y-condiciones" />
+      <Footer tyc="https://creditos.pedidosya.com/ec/terminos-y-condiciones" />
     </Layout>
   );
 };

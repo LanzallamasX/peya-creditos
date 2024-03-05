@@ -12,7 +12,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import Layout from "../components/Layout/Layout";
 import styles from "./index.module.scss";
-import VideoStory from "../components/VideoStory/VideoStory";
 import Benefits from "../components/Benefits/Benefits";
 import CarouselSwiper from "../components/CarouselSwiper/CarouselSwiper";
 import Requirements from "../components/Requirements/Requirements";
@@ -64,25 +63,25 @@ const Rd = ({ heroDataFromDB, promoDataFromDB }) => {
           imagesArray={heroDataFromDB}          
           tyc={getTyCForModal}
         />
-        <VideoStory
-          lng={lng}
-          name={'Juan'}
-          place={'Cata, tienda de calzone'}
-          video={'https://www.youtube.com/embed/K_Ig2THVe3U'}
-        />
         <Benefits lng={lng} />
         <CarouselSwiper lng={lng} />
         <Requirements />
         <CreditRequest lng={lng} /> 
         <PaymentSteps lng={lng} />
         <Testimonials
-          testimonies={[{
-            img: '/images/test-logo-cata.png',
-            text: '“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”'
-          }]}
+          testimonies={[
+            {
+              img: '/images/test-logo-delicias.png',
+              text: '“Volvería a pedirlo porque es muy fácil de solicitar y cómodo para pagar”'
+            },
+            {
+              img: '/images/test-logo-wePrep.png',
+              text: '“Volvería a sacar un crédito porque puedo pagarlo con las mismas ventas, porque es facil y los intereses no son altos”'
+            }
+          ]}
         />      
         <Faqs
-          tyc="https://creditos.pedidosya.com/terminos-y-condiciones"
+          tyc="https://creditos.pedidosya.com/do/terminos-y-condiciones"
         />
 
       </main>
@@ -94,7 +93,7 @@ const Rd = ({ heroDataFromDB, promoDataFromDB }) => {
           <PopUpTyC fn={openTyCModal} data={termsAndConditionsForModal} />
         ) : null}
       </AnimatePresence>
-      <Footer tyc="https://creditos.pedidosya.com/terminos-y-condiciones" />
+      <Footer tyc="https://creditos.pedidosya.com/do/terminos-y-condiciones" />
     </Layout>
   );
 };

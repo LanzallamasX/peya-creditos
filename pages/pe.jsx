@@ -12,7 +12,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import Layout from "../components/Layout/Layout";
 import styles from "./index.module.scss";
-import VideoStory from "../components/VideoStory/VideoStory";
 import Benefits from "../components/Benefits/Benefits";
 import CarouselSwiper from "../components/CarouselSwiper/CarouselSwiper";
 import Requirements from "../components/Requirements/Requirements";
@@ -64,12 +63,6 @@ const Pe = ({ heroDataFromDB, promoDataFromDB }) => {
           imagesArray={heroDataFromDB}          
           tyc={getTyCForModal}
         />
-        <VideoStory
-          lng={lng}
-          name={'Juan'}
-          place={'Cata, tienda de calzone'}
-          video={'https://www.youtube.com/embed/K_Ig2THVe3U'}
-        />
         <Benefits lng={lng} />
         <CarouselSwiper lng={lng} />
         <Requirements />
@@ -82,7 +75,7 @@ const Pe = ({ heroDataFromDB, promoDataFromDB }) => {
           }]}
         />      
         <Faqs
-          tyc="https://creditos.pedidosya.com/terminos-y-condiciones"
+          tyc="https://creditos.pedidosya.com/pe/terminos-y-condiciones"
         />
 
       </main>
@@ -94,7 +87,7 @@ const Pe = ({ heroDataFromDB, promoDataFromDB }) => {
           <PopUpTyC fn={openTyCModal} data={termsAndConditionsForModal} />
         ) : null}
       </AnimatePresence>
-      <Footer tyc="https://creditos.pedidosya.com/terminos-y-condiciones" />
+      <Footer tyc="https://creditos.pedidosya.com/pe/terminos-y-condiciones" />
     </Layout>
   );
 };
