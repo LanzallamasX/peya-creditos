@@ -82,6 +82,10 @@ const Ar = ({ heroDataFromDB, promoDataFromDB }) => {
               text: '“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”'
             },
             {
+              img: '/images/test-logo-bigote.png',
+              text: '“Es una excelente empresa de confianza que se puede trabajar y sus financiamiento es muy accesible ,también porque he crecido mucho con ellos desde ya mil gracias”'
+            },
+            {
               img: '/images/test-logo-donaMatsu.png',
               text: '“Sí volvería a sacar un crédito con PedidosYa. Es fácil y rápido me brinda más flexibilidad en el día a día”'
             }
