@@ -81,14 +81,21 @@ const Ar = ({ heroDataFromDB, promoDataFromDB }) => {
               img: '/images/test-logo-cata.png',
               text: '“Al poder pagar de contado pudimos comprar la chopera a un mejor precio y sumar un exhibidor”'
             },
+            /*
             {
               img: '/images/test-logo-bigote.png',
               text: '“Es una excelente empresa de confianza que se puede trabajar y sus financiamiento es muy accesible ,también porque he crecido mucho con ellos desde ya mil gracias”'
+            },*/
+            {
+              img: '/images/test-logo-losArmenios.png',
+              text: '“Volvería a sacar un crédito con PedidosYa porque sirve mucho para hacer cambios en el negocio y comprar artículos que son muy caros en gastronomía.“'
             },
             {
               img: '/images/test-logo-donaMatsu.png',
               text: '“Sí volvería a sacar un crédito con PedidosYa. Es fácil y rápido me brinda más flexibilidad en el día a día”'
             }
+
+            
           ]}
         />      
         <Faqs

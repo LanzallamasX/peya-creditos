@@ -71,7 +71,7 @@ const Pe = ({ heroDataFromDB, promoDataFromDB }) => {
         <Testimonials
           testimonies={[{
             img: '/images/test-logo-chia.png',
-            text: '“Volvería a solicitar un crédito con PedidosYa por que los intereses no son altos y me sirve para abastecer mi negocio y poder seguir vendiendo en la plataforma, por otro lado es una facilidad que los bancos en Perú no nos da a las pequeñas empresas. Es un financiamiento fácil y rápido para mejorar el negocio. Muy agradecida con la facilidad que me brindaron para adquirir el crédito”'
+            text: '“Volvería a solicitar un crédito con PedidosYa por que los intereses no son altos y me sirve para abastecer mi negocio y poder seguir vendiendo en la plataforma, por otro lado es una facilidad que los bancos en Perú no nos da a las pequeñas empresas”'
           }]}
         />      
         <Faqs

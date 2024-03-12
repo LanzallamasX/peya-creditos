@@ -77,10 +77,11 @@ const Ec = ({ heroDataFromDB, promoDataFromDB }) => {
         <PaymentSteps lng={lng} />
         <Testimonials
           testimonies={[
+            /*
             {
               img: '/images/test-logo-freshNaturals.png',
               text: '“Volvería a pedirlo porque es rápido y eficaz sirve de mucha ayuda ya que lo podría usar para compra de mercadería o para remodelar mi local”'
-            },
+            },*/
             {
               img: '/images/test-logo-saiko.png',
               text: '“Es muy útil para abastecer de materia prima y poder ofrecer más promociones así incrementar mi ticket promedio diario, ofrecer mejores promociones cada vez”'
