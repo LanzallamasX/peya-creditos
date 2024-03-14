@@ -111,7 +111,7 @@ const Ar = ({ heroDataFromDB, promoDataFromDB }) => {
           <PopUpTyC fn={openTyCModal} data={termsAndConditionsForModal} />
         ) : null}
       </AnimatePresence>
-      <Footer tyc="https://creditos.pedidosya.com/terminos-y-condiciones" />
+      <Footer tyc="https://creditos.pedidosya.com/terminos-y-condiciones" pdp="https://creditos.pedidosya.com/politica-de-privacidad" />
     </Layout>
   );
 };
