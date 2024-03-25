@@ -23,8 +23,8 @@ const Faqs = ({ tyc }) => {
         `,
         event: 'credit_more_info.clicked',
         faqUser: 'userid',
-        questionClicked: 'Como puedo obtener una oferta de PedidosYa Creditos',
-        questionEvent: 'isOnline',
+    //    questionClicked: 'Como puedo obtener una oferta de PedidosYa Creditos',
+        questionClicked: 'isOnline',
 
     },
     {
@@ -35,8 +35,8 @@ const Faqs = ({ tyc }) => {
         <strong> La solicitud es segura, online y fácil</strong>, conoce más detalles en los <a href="${tyc}" title="Términos y condiciones de PedidosYA Créditos" target="_blank"><strong>Términos y condiciones</strong></a> de PedidosYa Créditos.`,
         event: 'credit_more_info.clicked',
         faqUser: 'userid',
-        questionClicked: 'Como es el credito que puedo solicitar',
-        questionEvent: 'fixedInstallment',
+  //      questionClicked: 'Como es el credito que puedo solicitar',
+        questionClicked: 'fixedInstallment',
 
     },
     {
@@ -46,8 +46,8 @@ const Faqs = ({ tyc }) => {
         `El dinero <strong> recibirás en la cuenta bancaria asociada a tu contrato con PedidosYa.</strong> La misma en la que recibes la liquidación por tus ventas semanales.`,
         event: 'credit_more_info.clicked',
         faqUser: 'userid',
-        questionClicked: 'Donde recibo el dinero',
-        questionEvent: 'moneyPlacement',
+   //     questionClicked: 'Donde recibo el dinero',
+        questionClicked: 'moneyPlacement',
 
     },
     {
@@ -59,31 +59,17 @@ const Faqs = ({ tyc }) => {
         Y<strong> si quieres completar el pago de la cuota antes del cierre de la siguiente liquidación, podrás realizar una transferencia bancaria</strong> a la cuenta indicada en la solapa Créditos, dentro de la sección Finanzas en Partner Portal.`,
         event: 'credit_more_info.clicked',
         faqUser: 'userid',
-        questionClicked: 'Como y cuando pago las cuotas',
-        questionEvent: 'howIsPaid',
+     //   questionClicked: 'Como y cuando pago las cuotas',
+        questionClicked: 'howIsPaid',
 
     },
   ];
 
 
-  const handleFaqsClick = (event, questionClicked, questionEvent, faqUser) => {
-    
-    window.dataLayer.push({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});
-          //    console.log({'event': event, 'userId': faqUser, 'questionClicked': questionClicked, 'questionEvent': questionEvent});    
-  }; 
 
-  const itemClasses = {
-    base: "py-0 w-full",
-    title: "font-normal text-medium",
-    trigger: "px-2 py-0 data-[hover=true]:bg-default-100 rounded-lg h-14 flex items-center",
-    indicator: "text-bold",
-    content: "text-small px-2",
-    indicator: "a",
-  };
+
 
   
-
-
   return (
     <section id="faqs" className={styles.faqsContainer}>
       <div className="container w-[95vw] sm:w-[100vw] md:w-[50vw] lg:w-[68vw] xl:w-[68vw]">
@@ -93,11 +79,9 @@ const Faqs = ({ tyc }) => {
       <div style={styles}>
       
       {faqData.map((faq) => (
-            <AccordionComponent num={faq.key} title={faq.question} content={faq.content}
-            onPress={() =>
-              handleFaqsClick(faq.event, faq.questionClicked, faq.questionEvent, faq.faqUser)                
-            }
-             />
+            <AccordionComponent num={faq.key} title={faq.question} content={faq.content} event={faq.event} faqUser={faq.faqUser} questionClicked={faq.questionClicked} 
+
+             />             
           ))} 
       
     </div>

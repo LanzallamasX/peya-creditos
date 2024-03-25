@@ -29,40 +29,40 @@ export default function Home() {
         
       </div>
       <div className="px-peya-x py-8">
-        <div className="flex flex-col lg:flex-row justify-evenly px-peya-x py-8 text-4xl items-center flex-wrap text-black font-texta-bold bg-peya-white h-full lg:gap-12">          
+        <div className="flex flex-col lg:flex-row justify-evenly px-peya-x py-8 text-2xl items-center flex-wrap text-black font-texta-bold bg-peya-white h-full lg:gap-12">          
           <Link
             href={"/ar/"}
             className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
-            <span className="fi fi-ar h-6 rounded-peya"></span>
+            <span className="fi fi-ar h-6 rounded-peya text-4xl"></span>
             <div className={styles.fontSite}>Argentina</div>
           </Link>
           <Link
             href={"/cl/"}
             className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
-            <span className="fi fi-cl h-6 rounded-peya"></span>
+            <span className="fi fi-cl h-6 rounded-peya text-4xl"></span>
             <div className={styles.fontSite}>Chile</div>
           </Link>
           <Link
             href={"/pe/"}
             className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
-            <span className="fi fi-pe h-6 rounded-peya"></span>
+            <span className="fi fi-pe h-6 rounded-peya text-4xl"></span>
             <div className={styles.fontSite}>Perú</div>
           </Link>
           <Link
             href={"/ec/"}
             className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
-            <span className="fi fi-ec h-6 rounded-peya"></span>
+            <span className="fi fi-ec h-6 rounded-peya text-4xl"></span>
             <div className={styles.fontSite}>Ecuador</div>
           </Link>  
           <Link
             href={"/rd/"}
             className="w-fit mx-auto flex justify-center items-center gap-2 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:-bottom-1 before:left-0 before:bg-white before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300"
           >
-            <span className="fi fi-do h-6 rounded-peya"></span>
+            <span className="fi fi-do h-6 rounded-peya text-4xl"></span>
             <div className={styles.fontSite}>República Dominicana</div>
           </Link>
         </div>

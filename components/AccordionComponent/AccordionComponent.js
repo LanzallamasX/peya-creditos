@@ -6,13 +6,22 @@ export default function Accordion(props) {
 
   const toggle = () => {
     setIsShowing(!isShowing);
+    handleFaqsClick();
   };
+  
+
+  const handleFaqsClick = (event1, questionClicked, questionEvent, faqUser) => {
+    
+    window.dataLayer.push({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});
+             console.log({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});    
+  }; 
 
   return (
     <div className={styles.wrapAccordion}>
       <button className={styles.buttonAccordion}
         onClick={toggle}
         type="button"
+        
       >
         <div className="flex gap-x-4 items-center">
           <h1>{props.num}</h1>

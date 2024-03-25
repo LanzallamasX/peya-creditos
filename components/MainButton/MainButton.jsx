@@ -16,7 +16,7 @@ const MainButton = ({
   const handleClickButton = () => {
     
     window.dataLayer.push({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
-    console.log({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
+  //  console.log({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
 
     if (fn) {
       fn();
