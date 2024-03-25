@@ -13,7 +13,7 @@ export default function Accordion(props) {
   const handleFaqsClick = (event1, questionClicked, questionEvent, faqUser) => {
     
     window.dataLayer.push({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});
-             console.log({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});    
+         //    console.log({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});    
   }; 
 
   return (
