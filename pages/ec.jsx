@@ -68,7 +68,7 @@ const Ec = ({ heroDataFromDB, promoDataFromDB }) => {
           lng={lng}
           name={'Julio'}
           place={'Rukito Grill'}
-          video={'https://www.youtube.com/embed/nLCSF2NuutA'}
+          video={'nLCSF2NuutA'}
         />
         <Benefits lng={lng} />
         <CarouselSwiper lng={lng} />

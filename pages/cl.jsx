@@ -68,7 +68,7 @@ const Cl = ({ heroDataFromDB, promoDataFromDB }) => {
           lng={lng}
           name={'Miguel'}
           place={'Del Country Sushi'}
-          video={'https://www.youtube.com/embed/7CU8hp6SEYk'}
+          video={'7CU8hp6SEYk'}
         />
         <Benefits lng={lng} />
         <CarouselSwiper lng={lng} />
