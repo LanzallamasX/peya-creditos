@@ -25,6 +25,7 @@ import Hero from "../components/Hero/Hero";
 import PopUp from "../components/PopUp/PopUp";
 import PopUpTyC from "../components/PopUpTyC/PopUpTyC";
 
+
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.refresh();
 
@@ -68,7 +69,9 @@ const Ar = ({ heroDataFromDB, promoDataFromDB }) => {
           lng={lng}
           name={'Juan'}
           place={'Cata, tienda de calzone'}
-          video={'https://www.youtube.com/embed/K_Ig2THVe3U'}
+          video={'K_Ig2THVe3U'}
+          videoId="VIDEO_ID"
+          userId="USER_ID"
         />
         <Benefits lng={lng} />
         <CarouselSwiper lng={lng} />

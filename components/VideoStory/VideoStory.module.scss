@@ -42,6 +42,9 @@
 
      iframe{
         border-radius: 20px;
+        width: 75%;
+        height: 480px;
+    
 
      }
 
@@ -49,10 +52,49 @@
  }
 
 
- @media (max-width: 768px) {
+ @media (max-width: 1530px) {
+
+    .videoStoryContainer {
+
+        iframe{
+            border-radius: 20px;
+            width: 85%;
+            height: 420px;
+        
+    
+         }
+    }
 
 
  }
+
+
+ @media (max-width: 1280px) {
+
+    .videoStoryContainer {
+
+        iframe{
+            border-radius: 20px;
+            width: 85%;
+            height: 325px;
+        
+         }
+    }
+ }
+
+
+ @media (max-width: 1025px) {
+
+    .videoStoryContainer {
+
+        iframe{
+            border-radius: 20px;
+            width: 85%;
+            height: 250px;
+        
+         }
+    }
+ } 
 
 
 
@@ -101,10 +143,16 @@
                 display: flex;
             }
     
-            iframe {
-                width: 100%;
-            }
+
         }         
+
+        iframe{
+            border-radius: 20px;
+            width: 100%;
+            height: 370px;
+        
+    
+         }        
 
          .videoStoryCardsMainContainer {
              display: flex;

@@ -31,7 +31,8 @@
     "sass": "^1.56.1",
     "svg-loaders-react": "^2.2.1",
     "swiper": "^8.4.7",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "youtube-api": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
