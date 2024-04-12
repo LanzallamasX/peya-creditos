@@ -1,9 +1,10 @@
 import styles from "./VideoStory.module.scss";
 import YouTubeAPILoader from "../YouTubeAPILoader/YouTubeAPILoader";
+import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
 
 import React, { useState, useEffect, useRef } from 'react';
 
-const VideoStory = ({ lng, name, place, video }) => {
+const VideoStory = ({ lng, name, place, video, eventClick }) => {
   
   const handleVideoPlay = () => {
     window.dataLayer.push({'event': 'video.play', 'userId': 'user ?'});
@@ -19,7 +20,7 @@ const VideoStory = ({ lng, name, place, video }) => {
           </div>
 
 
-          <YouTubeAPILoader className="h-[40vh] md:h-[30vh] lg:h-[35vh] xl:h-[50vh] sm:w-[90vw] w-[100vw] md:w-[50vw] lg:w-[40vw] xl:w-[45vw] relative overflow-hidden mt-4" videoId={video} />
+          <YouTubeAPILoader className="h-[40vh] md:h-[30vh] lg:h-[35vh] xl:h-[50vh] sm:w-[90vw] w-[100vw] md:w-[50vw] lg:w-[40vw] xl:w-[45vw] relative overflow-hidden mt-4" eventClick={'eventClick'} videoId={video} />
 
 
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Faqs.module.scss";
+import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
 
 import AccordionComponent from "../AccordionComponent/AccordionComponent";
 
@@ -79,7 +80,7 @@ const Faqs = ({ tyc }) => {
       <div style={styles}>
       
       {faqData.map((faq) => (
-            <AccordionComponent num={faq.key} title={faq.question} content={faq.content} event={faq.event} faqUser={faq.faqUser} questionClicked={faq.questionClicked} 
+            <AccordionComponent eventClick={'eventClick'} num={faq.key} title={faq.question} content={faq.content} event={faq.event} faqUser={faq.faqUser} questionClicked={faq.questionClicked} 
 
              />             
           ))} 

@@ -1,19 +1,30 @@
 import { useState } from "react";
 import styles from "./AccordionComponent.module.scss";
+import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
 
-export default function Accordion(props) {
+export default function Accordion(props, eventClick) {
   const [isShowing, setIsShowing] = useState(false);
 
   const toggle = () => {
     setIsShowing(!isShowing);
-    handleFaqsClick();
+    handleFaqsClick(props.event, props.questionClicked);
+
+
+
   };
   
 
-  const handleFaqsClick = (event1, questionClicked, questionEvent, faqUser) => {
+  const handleFaqsClick = (event, questionClicked, eventClick) => {
     
-    window.dataLayer.push({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});
-         //    console.log({'event': props.event, 'userId': props.faqUser, 'questionClicked': props.questionClicked});    
+  //  window.dataLayer.push({'event': props.event, 'questionClicked': props.questionClicked});
+        //     console.log({'event': props.event, 'questionClicked': props.questionClicked});    
+
+        pushTrackingEvent(event, {
+          event: event,
+          questionClicked: questionClicked
+        });
+    
+
   }; 
 
   return (
