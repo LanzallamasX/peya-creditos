@@ -18,7 +18,7 @@ export default function Home() {
       <div className="flex justify-center items-center gap-4 p-4 h-min bg-peya-blue text-black">
         <img
           src="/images/hero/pedidosYaCreditos.png"
-          className="w-60 lg:w-60 lg:hidden"
+          className="w-60 lg:w-60 lg:hidden" 
           alt=""
         />
         <img
