@@ -17,13 +17,13 @@ export default function Home() {
     <section className="min-h-screen grid grid-rows-main-page font-texta">
       <div className="flex justify-center items-center gap-4 p-4 h-min bg-peya-blue text-black">
         <img
-          src="/images/hero/pedidosYaLogo.svg"
-          className="w-20 lg:w-48 lg:hidden"
+          src="/images/hero/pedidosYaCreditos.png"
+          className="w-60 lg:w-60 lg:hidden"
           alt=""
         />
         <img
-          src="/images/hero/pedidosYaLogo.svg"
-          className="w-14 lg:w-48 hidden lg:block"
+          src="/images/hero/pedidosYaCreditos.png"
+          className="w-30 lg:w-60 hidden lg:block"
           alt=""
         />
         
