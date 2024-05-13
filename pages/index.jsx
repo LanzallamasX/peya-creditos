@@ -1,6 +1,10 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+//import axios from "axios";
+import { countries, zones } from 'moment-timezone/data/meta/latest.json';
 
 export const metadata = {
   title: "Experiencias PedidosYa",
@@ -12,7 +16,72 @@ export const metadata = {
     "Pagos, PedidosYa Pagos, PedidosYa, Visa, Visa Crédito, Crédito, pedidosya, pedidos, rápido, compra, tarjeta, visa, crédito, débito, beneficios, compras, descuentos, gana, premio, concurso, chances, supermercados, restaurantes, mercados, farmacias, tiendas, helados, mascotas, despegar, viajes, viajar, viaje, tour, new york, nueva york, manhattan, hamburguesa, burga, burger",
 };
 
-export default function Home() {
+const Home = () => {
+  const landings = ['AR', 'CL', 'DO', 'EC', 'PE'];
+  const [state, setState] = useState({
+    countryName: "",
+    countryCode: ""
+  });
+
+  const router = useRouter();
+  
+  // Llamado a API -> Eficaz pero sólo se puede usar gratis 1.000 veces por día
+  /*const getGeoInfo = () => {
+    axios('https://ipapi.co/json/')
+    .then(res => {
+      const { data } = res;
+      
+  
+      console.log('country  ', `/${data.country.toLowerCase()}/`)
+  
+      if (data.country && countries.includes(data.country.toLowerCase())) {
+        if (state.country === 'do') {
+          //redirect('/rd/');
+          router.push('/rd');
+        } else {
+          //redirect(`/${data.country.toLowerCase()}/`);
+          router.push('/ar');
+        }
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };*/
+
+  // Usando Moment
+  const getGeoInfo = () => {
+    const timeZoneToCountry = {};
+
+    Object.keys(zones).forEach(z => {
+      const cityArr = z.split('/');
+      const city = cityArr[cityArr.length-1];
+      timeZoneToCountry[city] = countries[zones[z].countries[0]];
+    });
+
+    let userCity, userCountry, userTimeZone;
+    if (Intl) {
+      userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const tzArr = userTimeZone.split('/');
+      userCity = tzArr[tzArr.length-1];
+      userCountry = timeZoneToCountry[userCity];
+    } else {
+      console.log('No Intl')
+    }
+
+    if (userCountry && landings.includes(userCountry.abbr)) {
+      if(userCountry.abbr === 'DO') {
+        router.push('/rd');
+      } else {
+        router.push(`/${userCountry.abbr.toLowerCase()}`);
+      }
+    }
+  }
+
+  useEffect(() => {
+    getGeoInfo();
+  }, []);
+
   return (
     <section className="min-h-screen grid grid-rows-main-page font-texta">
       <div className="flex justify-center items-center gap-4 p-4 h-min bg-peya-blue text-black">
@@ -68,10 +137,9 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center items-center w-full px-4 lg:px-peya-x h-fit bg-peya-blue py-8">
-
-        
       </div>
-      
     </section>
   );
 }
+
+export default Home;
