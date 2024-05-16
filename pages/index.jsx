@@ -52,6 +52,8 @@ const Home = () => {
   };*/
 
   // Usando Moment
+
+  
   const getGeoInfo = () => {
     const timeZoneToCountry = {};
 
@@ -84,9 +86,14 @@ const Home = () => {
     getGeoInfo();
   }, []);
 
+  
+
   return (
     <>
-          <Head>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content="pedidosya créditos, créditos pedidosya, préstamos pedidosya, pedidosya préstamos, simulador prestamo, simulador creditos, creditos personales, creditos online, creditos, simulador de creditos, créditos online, pedir prestamo, prestamo facil y rapido, prestamo facil, prestamo facil y rapido online, PedidosYa, Visa, Visa Crédito, Crédito, pedidosya, pedidos, rápido, compra, tarjeta, visa, crédito, beneficios, compras, descuentos, cashback, pedidos, digital, app, precio, precios, financiamiento, supermercados, restaurantes" />
         <link rel="icon" href="/icon.ico" />
       </Head>
           <section className="min-h-screen grid grid-rows-main-page font-texta">
