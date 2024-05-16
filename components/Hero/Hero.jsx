@@ -39,7 +39,7 @@ const Hero = ({ imagesArray, lng, fn, tyc }) => {
                     <h3 dangerouslySetInnerHTML={{ __html: data.subtitle }} >{}</h3>
 
                     <MainButton 
-                                eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'1'} 
+                                eventClick={"landing_option.clicked"} userid={'User ?'} bannerNumber={'1'} 
                                 text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>
@@ -64,7 +64,7 @@ const Hero = ({ imagesArray, lng, fn, tyc }) => {
                     <h1 dangerouslySetInnerHTML={{ __html: data.title }}>{}</h1>
                     <h3 dangerouslySetInnerHTML={{ __html: data.subtitle }}>{}</h3>
 
-                    <MainButton  eventClick={"credit_selection.proceeded"} userid={'User ?'} bannerNumber={'1'} 
+                    <MainButton  eventClick={"landing_option.clicked"} userid={'User ?'} bannerNumber={'1'} 
                       text={'Simular crédito'} />
                     {data.tyc !== "" && data.tyc !== null ? (
                       <small onClick={() => tyc(data.tyc)}>

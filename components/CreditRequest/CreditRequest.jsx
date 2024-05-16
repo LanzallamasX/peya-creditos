@@ -110,7 +110,7 @@ const CreditRequest = ({ lng }) => {
             <MainButton                  
                   color="buttonRed"
                   text={'Simular crédito'}
-                  eventClick={"credit_selection.proceeded"}
+                  eventClick={"landing_option.clicked"}
                   userid={'User ?'}
                   bannerNumber={'3'} 
             />
