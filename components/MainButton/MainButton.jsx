@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "./MainButton.module.scss";
 import { isMobile } from "react-device-detect";
- import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
+import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
+import { TRACKING_EVENTS } from "../../utils/pushTrackingEvent";
 
 
 const MainButton = ({
@@ -15,16 +16,11 @@ const MainButton = ({
   bannerNumber
 }) => {
   
-  const handleClickButton = () => {
+    const handleClickButton = () => {
+      pushTrackingEvent(TRACKING_EVENTS.LANDING_OPTION_CLICKED, {
+        bannerNumber: "bannerNumber" + bannerNumber,
+      });
 
-    //window.dataLayer.push({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
-  //  console.log({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
-    pushTrackingEvent(eventClick, {
-      bannerNumber: "bannerNumber" + bannerNumber,
-      eventClick: eventClick
-    });
-
-   //   console.log({'event': eventClick, 'userId': userid, 'bannerNumber': bannerNumber,});
   
     if (fn) {
       fn();

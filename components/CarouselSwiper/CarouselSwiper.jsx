@@ -6,6 +6,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import TagManager from 'react-gtm-module';
 
+import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
+import { TRACKING_EVENTS } from "../../utils/pushTrackingEvent";
+
 const CarouselSwiper = ({ lng }) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -41,15 +44,7 @@ const CarouselSwiper = ({ lng }) => {
   const amount = windowWidth < 768 ? "1" : "5";
 
 
-  const handleSwipeAction = () => {
-    // Registra el evento en GTM
-    TagManager.dataLayer({
-      dataLayer: {
-        event: "carousel.swipe",
-        userId: 'User ?',
-      },
-    });
-  };
+
   
 
   return (    
@@ -58,10 +53,7 @@ const CarouselSwiper = ({ lng }) => {
         <h2>{`¿Para qué lo ${lng === 'AR' ? 'podés' : 'puedes'} usar?`}</h2>
         <p>{`${lng === 'AR' ? 'Usalo' : 'Úsalo'} para lo que necesites`}</p>
         <SliderComponent amount={amount} paginationBoolean={false} loopBoolean={true} navigation={true}
-                        onSwiper={(swiper) => {
-                          // Configura el manejador de eventos de swiper
-                          swiper.on('slideChange', handleSwipeAction);
-                        }}                                
+                                                       
         >          
               <SwiperSlide>
                 <div className={styles.wrapImgSlider}>

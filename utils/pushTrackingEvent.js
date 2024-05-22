@@ -1,5 +1,11 @@
-// tracking.js
 
+export const TRACKING_EVENTS = {
+  CREDIT_MORE_INFO_CLICKED: 'credit_more_info.clicked',
+  LANDING_OPTION_CLICKED: 'landing_option.clicked',
+  VIDEO_PLAY: 'video.play',
+  VIDEO_PAUSE: 'video.pause',
+ // CAROUSEL_SWIPE: 'carousel.swipe',
+};
 
 
 export const pushTrackingEvent = (event, trackingData = {}) => {
@@ -14,4 +20,6 @@ export const pushTrackingEvent = (event, trackingData = {}) => {
   }
 };
 
+
 export default pushTrackingEvent;
+

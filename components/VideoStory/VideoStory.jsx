@@ -6,9 +6,12 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const VideoStory = ({ lng, name, place, video, eventClick }) => {
   
+  /*
   const handleVideoPlay = () => {
     window.dataLayer.push({'event': 'video.play', 'userId': 'user ?'});
   };
+
+  */
 
   return (
     <section id="videoStorySection" className={styles.videoStoryContainer}>

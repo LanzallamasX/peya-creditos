@@ -3,10 +3,15 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
+
+import { TRACKING_EVENTS } from "../../utils/pushTrackingEvent";
 
 
 const SliderComponent = ({
   children, id, amount, loopBoolean, paginationBoolean, position, navigation, autoplay
+
+  
 }) => {
 
   let _autoplay;
@@ -15,7 +20,20 @@ const SliderComponent = ({
     disableOnInteraction: false,
   };
 
+  const handleSwipeAction = () => {
+    
+    /*
+    pushTrackingEvent(TRACKING_EVENTS.CAROUSEL_SWIPE, {
+     carousel: "funciona",
+    });
+
+    */
+
+  };
+
   return (
+
+    
     <Swiper
       slidesPerView={amount}
       direction={position}
@@ -27,7 +45,10 @@ const SliderComponent = ({
       autoplay={_autoplay}
       loop={loopBoolean}
       id={id}
-
+      onSwiper={(swiper) => {
+        // Configura el manejador de eventos de swiper
+        swiper.on('slideChange', handleSwipeAction);
+      }} 
       
       
     >

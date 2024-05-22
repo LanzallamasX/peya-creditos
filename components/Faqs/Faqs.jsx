@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Faqs.module.scss";
-import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
-
 import AccordionComponent from "../AccordionComponent/AccordionComponent";
 
 const Faqs = ({ tyc }) => {

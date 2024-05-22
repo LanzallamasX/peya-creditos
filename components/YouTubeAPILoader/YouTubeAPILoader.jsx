@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
+import { TRACKING_EVENTS } from "../../utils/pushTrackingEvent";
 
 const YouTubeAPILoader = ({ videoId, eventClick }) => {
   const playerRef = useRef(null);
@@ -49,19 +50,15 @@ const YouTubeAPILoader = ({ videoId, eventClick }) => {
     const state = event.data;
     if (state === window.YT.PlayerState.PLAYING) {
 
-      pushTrackingEvent(eventClick, {
-        eventClick: 'video.play',
+
+      pushTrackingEvent(TRACKING_EVENTS.VIDEO_PLAY, {
         videoName: 'developmentStories'
       });
 
- //    window.dataLayer.push({'event': 'video.play', 'videoName': 'developmentStories'});
-  //   console.log({'event': 'video.play', 'videoName': 'developmentStories'});
 
     } else if (state === window.YT.PlayerState.PAUSED) {
-//     window.dataLayer.push({'event': 'video.pause', 'videoName': 'developmentStories'});
 
-      pushTrackingEvent(eventClick, {
-        eventClick: 'video.pause',
+      pushTrackingEvent(TRACKING_EVENTS.VIDEO_PAUSE, {
         videoName: 'developmentStories'
       });
 

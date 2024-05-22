@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./AccordionComponent.module.scss";
 import { pushTrackingEvent } from "../../utils/pushTrackingEvent";
+import { TRACKING_EVENTS } from "../../utils/pushTrackingEvent";
 
 export default function Accordion(props, eventClick) {
   const [isShowing, setIsShowing] = useState(false);
@@ -9,22 +10,15 @@ export default function Accordion(props, eventClick) {
     setIsShowing(!isShowing);
     handleFaqsClick(props.event, props.questionClicked);
 
-
-
   };
   
 
   const handleFaqsClick = (event, questionClicked, eventClick) => {
     
-  //  window.dataLayer.push({'event': props.event, 'questionClicked': props.questionClicked});
-        //     console.log({'event': props.event, 'questionClicked': props.questionClicked});    
-
-        pushTrackingEvent(event, {
-          event: event,
+        pushTrackingEvent(TRACKING_EVENTS.CREDIT_MORE_INFO_CLICKED, {
           questionClicked: questionClicked
         });
     
-
   }; 
 
   return (
