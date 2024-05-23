@@ -20,7 +20,7 @@ useEffect(() => {
 
 }, [])
 
-
+console.log('test');
  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
  const gtmPreview = 'env-1'
 
