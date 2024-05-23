@@ -4,6 +4,7 @@ import TagManager from 'react-gtm-module'
 import { AppContext } from '../context/AppContext'
 import getFirestoreApp from '../firebase/config'
 import '../styles/globals.scss'
+//import Script from 'next/script';
 
 getFirestoreApp()
 
@@ -12,13 +13,16 @@ function MyApp({ Component, pageProps }) {
 useEffect(() => {
   
   const tagManagerArgs = {
-    gtmId: process.env.NEXT_PUBLIC_GOOAN_GTMID    
+    gtmId: process.env.NEXT_PUBLIC_GOOAN_GTMID  
   }
 
   TagManager.initialize(tagManagerArgs)
 
 }, [])
 
+
+ const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+ const gtmPreview = 'env-1'
 
   return(
     <>
@@ -32,7 +36,17 @@ useEffect(() => {
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       `}</Script>
-      
+
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}strategy="afterInteractive"/>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gtmId}');
+          gtag('set', {'gtm_preview':'${gtmPreview}'});
+        `}
+      </Script>
       <AppContext>
         <Component {...pageProps} />
       </AppContext>

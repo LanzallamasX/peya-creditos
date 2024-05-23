@@ -11,8 +11,6 @@ const MainButton = ({
   color = "buttonBlue",
   text = "Simular mi crédito",
   fn,
-  eventClick,
-  userid,
   bannerNumber
 }) => {
   

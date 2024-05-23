@@ -1,4 +1,3 @@
-
 export const TRACKING_EVENTS = {
   CREDIT_MORE_INFO_CLICKED: 'credit_more_info.clicked',
   LANDING_OPTION_CLICKED: 'landing_option.clicked',
@@ -6,7 +5,6 @@ export const TRACKING_EVENTS = {
   VIDEO_PAUSE: 'video.pause',
  // CAROUSEL_SWIPE: 'carousel.swipe',
 };
-
 
 export const pushTrackingEvent = (event, trackingData = {}) => {
   const isValidEvent = typeof event === 'string' && event.trim().length > 0;
@@ -19,7 +17,6 @@ export const pushTrackingEvent = (event, trackingData = {}) => {
     console.log(eventData);
   }
 };
-
 
 export default pushTrackingEvent;
 
