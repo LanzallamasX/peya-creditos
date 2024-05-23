@@ -11,6 +11,8 @@ getFirestoreApp()
 function MyApp({ Component, pageProps }) {
   
 useEffect(() => {
+
+  
   
   const tagManagerArgs = {
     gtmId: process.env.NEXT_PUBLIC_GOOAN_GTMID  
@@ -22,6 +24,7 @@ useEffect(() => {
 
 console.log('test');
  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+ const gaId = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
  const gtmPreview = 'env-1'
 
   return(
@@ -47,6 +50,23 @@ console.log('test');
           gtag('set', {'gtm_preview':'${gtmPreview}'});
         `}
       </Script>
+
+      <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+      />
+
+      <Script id='' strategy='lazyOnload'>
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}', {
+              page_path: window.location.pathname,
+              });
+          `}
+      </Script>
+
       <AppContext>
         <Component {...pageProps} />
       </AppContext>
