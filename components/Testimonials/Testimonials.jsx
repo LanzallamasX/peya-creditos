@@ -76,7 +76,7 @@ const Testimonials = ({ testimonies }) => {
                 <div className={styles.odometerNum}>
                     <div className={styles.odometerWrpBf}>+</div>
                     <div className={styles.odometerWrpNm}>
-                      <div className={styles.odometer} id="odometer"><span className="data">15000</span></div>
+                      <div className={styles.odometer} id="odometer"><span className="data">20000</span></div>
                     </div>
                 </div>
                 <div className={styles.odometerText}>Créditos solicitados</div>
