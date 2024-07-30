@@ -4,6 +4,7 @@ import TagManager from 'react-gtm-module'
 import { AppContext } from '../context/AppContext'
 import getFirestoreApp from '../firebase/config'
 import '../styles/globals.scss'
+
 //import Script from 'next/script';
 
 getFirestoreApp()
@@ -22,7 +23,7 @@ useEffect(() => {
 
 }, [])
 
-console.log('test');
+
  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
  const gaId = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
  const gtmPreview = 'env-1'
@@ -66,6 +67,34 @@ console.log('test');
               });
           `}
       </Script>
+
+        {/* Meta Pixel Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window,document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '182269302117788');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=182269302117788&ev=PageView&noscript=1"
+          />
+        </noscript>
+        {/* End Meta Pixel Code */}
+      
 
       <AppContext>
         <Component {...pageProps} />
