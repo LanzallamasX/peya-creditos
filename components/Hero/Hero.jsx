@@ -30,7 +30,7 @@ const Hero = ({ imagesArray, lng, fn, tyc }) => {
             .filter((item) => item.country === lng && item.device !== "mobile")
             .map((data) => (
               <SwiperSlide key={data.id}>
-                <div className={styles.bgSliderContainer} style={{ backgroundImage: `url(${data.url})` }}></div>
+                <div className={styles.bgSliderContainer} style={{ backgroundImage: `url("/images/header.jpg")` }}></div>
                 <div className={styles.spacerMedium}></div>
                 <div className={styles.heroSliderContainer}>
                   
@@ -56,7 +56,10 @@ const Hero = ({ imagesArray, lng, fn, tyc }) => {
             .filter((item) => item.country === lng && item.device === "mobile")
             .map((data) => (
               <SwiperSlide key={data.id}>
-                <div className={styles.bgSliderContainer} style={{ backgroundImage: `url(${data.url})` }}></div>
+             {/*   <div className={styles.bgSliderContainer} style={{ backgroundImage: `url(${data.url})` }}></div>  */ }
+                <div className={styles.bgSliderContainer} style={{ backgroundImage: `url("/images/header.jpg")` }}></div>
+
+                
                 <div className={styles.spacerMedium}></div>
                 <div className={styles.heroSliderContainer}>
                   
